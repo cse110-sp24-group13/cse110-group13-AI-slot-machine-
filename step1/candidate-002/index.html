@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt Engineering Slot Machine | Disrupting Reality</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>PROMPT <span class="highlight">ENGINEERING</span></h1>
+            <p class="subtitle">Disrupting the industry, one token at a time.</p>
+        </header>
+
+        <main class="slot-machine">
+            <div class="stats-bar">
+                <div class="stat-item">
+                    <span class="label">Compute Credits:</span>
+                    <span id="balance" class="value">500</span>
+                </div>
+                <div class="stat-item">
+                    <span class="label">Last Payout:</span>
+                    <span id="last-payout" class="value">0</span>
+                </div>
+            </div>
+
+            <div class="reels-container">
+                <div class="reel" id="reel-1">
+                    <div class="reel-strip" id="strip-1"></div>
+                </div>
+                <div class="reel" id="reel-2">
+                    <div class="reel-strip" id="strip-2"></div>
+                </div>
+                <div class="reel" id="reel-3">
+                    <div class="reel-strip" id="strip-3"></div>
+                </div>
+                <div class="reel-overlay"></div>
+            </div>
+
+            <div class="controls">
+                <button id="spin-btn" class="spin-button">GENERATE PROMPT (10 Tokens)</button>
+                <button id="reset-btn" class="reset-button hidden">PIVOT TO CRYPTO (Reset)</button>
+            </div>
+
+            <div class="log-container">
+                <h3>AI STATUS LOG</h3>
+                <div id="status-log" class="status-log">
+                    <p>> Awaiting GPU allocation...</p>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>© 2026 OpenAI'nt. No rights reserved. Data scraped without consent.</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
