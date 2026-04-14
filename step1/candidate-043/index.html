@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGI Casino - Token Burner v1.0</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="terminal-overlay"></div>
+    <div class="app-container">
+        <header>
+            <h1 class="glitch-text" data-text="AGI CASINO">AGI CASINO</h1>
+            <p class="subtitle">Spending your VC Seed Round (Pre-Revenue Stage)</p>
+        </header>
+
+        <main>
+            <div class="stats-panel">
+                <div class="stat">
+                    <span class="label">COMPUTE TOKENS</span>
+                    <span id="token-balance" class="value">1000</span>
+                </div>
+                <div class="stat">
+                    <span class="label">INFERENCE COST</span>
+                    <span class="value">-10</span>
+                </div>
+            </div>
+
+            <div class="slot-machine">
+                <div class="reels-container">
+                    <div class="reel" id="reel-1">
+                        <div class="symbol-strip"></div>
+                    </div>
+                    <div class="reel" id="reel-2">
+                        <div class="symbol-strip"></div>
+                    </div>
+                    <div class="reel" id="reel-3">
+                        <div class="symbol-strip"></div>
+                    </div>
+                </div>
+                <div class="slot-line"></div>
+            </div>
+
+            <div class="controls">
+                <button id="spin-btn" class="neon-btn">RUN INFERENCE (SPIN)</button>
+            </div>
+
+            <div class="status-terminal">
+                <div class="terminal-header">SYSTEM_LOG_v1.0.4.sh</div>
+                <div id="status-log" class="terminal-body">
+                    <p class="log-entry">> Initializing AGI Casino...</p>
+                    <p class="log-entry">> GPU Clusters: ONLINE</p>
+                    <p class="log-entry">> Hallucination Engine: READY</p>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Sam Altman's Electricity Bill. No AGI was harmed in the making of this slot machine.</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
