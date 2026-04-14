@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Model Trainer - Terminal V1.0</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="crt-overlay"></div>
+    <div class="terminal-container">
+        <header>
+            <div class="status-bar">
+                <span>MODEL_TRAINER_V1.0.SYS</span>
+                <span id="datetime">CONNECTING...</span>
+            </div>
+            <h1>DEEP_HYPE_GENERATOR</h1>
+            <p class="subtitle">"Where tokens go to die and hallucinate."</p>
+        </header>
+
+        <main>
+            <div class="slot-machine">
+                <div class="reel-container">
+                    <div class="reel" id="reel1">
+                        <div class="reel-strip"></div>
+                    </div>
+                    <div class="reel" id="reel2">
+                        <div class="reel-strip"></div>
+                    </div>
+                    <div class="reel" id="reel3">
+                        <div class="reel-strip"></div>
+                    </div>
+                </div>
+                <div class="win-line"></div>
+            </div>
+
+            <div class="dashboard">
+                <div class="stats">
+                    <div class="stat-box">
+                        <label>TOKENS_REMAINING</label>
+                        <span id="token-count">1000</span>
+                    </div>
+                    <div class="stat-box">
+                        <label>CURRENT_MODEL</label>
+                        <span id="model-version">GPT-0.1-alpha</span>
+                    </div>
+                    <div class="stat-box">
+                        <label>COMPUTE_BURNED</label>
+                        <span id="compute-burned">0%</span>
+                    </div>
+                </div>
+
+                <div class="controls">
+                    <button id="spin-btn">TRAIN_MODEL (50 TOKENS)</button>
+                    <button id="collect-btn">PIVOT_TO_CRYPTO</button>
+                </div>
+            </div>
+
+            <div class="terminal-log">
+                <div id="log-content">
+                    <p>> SYSTEM READY.</p>
+                    <p>> AWAITING COMPUTE TOKENS...</p>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 UNETHICAL_AGI_CORP. NO RIGHTS RESERVED.</p>
+        </footer>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
