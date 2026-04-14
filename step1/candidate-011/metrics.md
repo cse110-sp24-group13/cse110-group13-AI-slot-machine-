@@ -12,15 +12,17 @@
 
 ## Timing
 - **Wall-Clock Time (s): 1m 58s ** 
-- **Tool-Reported Time (s): ** 
+- **Tool-Reported Time (s): 1m 13s** 
 
 ## Output
 - **Files Produced (count): 3** 
 - **Files Produced (names): index.html, script.js, style.css** 
-- **Lines of Code: ** 
+- **Lines of Code: 448 ** 
 - **Runs in Browser: Yes** 
 
 ## Quality Notes
-- **App Quality Notes:** 
+- **App Quality Notes:**
+
 
 - **Code Quality Notes:**
+
