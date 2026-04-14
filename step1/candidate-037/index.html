@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Token Burner | Spend. Spin. Hallucinate.</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <div class="logo">AI TOKEN BURNER <span class="v">v1.0.4-beta</span></div>
+            <div class="stats">
+                <div class="stat-box">
+                    <label>COMPUTE UNITS</label>
+                    <span id="token-count">10,000</span>
+                </div>
+                <div class="stat-box">
+                    <label>H100 QUOTA</label>
+                    <span id="h100-status">ONLINE</span>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="machine-container">
+                <div class="reels">
+                    <div class="reel" id="reel-1"><div class="strip"></div></div>
+                    <div class="reel" id="reel-2"><div class="strip"></div></div>
+                    <div class="reel" id="reel-3"><div class="strip"></div></div>
+                    <div class="win-line"></div>
+                </div>
+
+                <div class="controls">
+                    <div class="bet-control">
+                        <label>INFERENCE COST</label>
+                        <select id="bet-amount">
+                            <option value="10">10 TOKENS (Basic)</option>
+                            <option value="50">50 TOKENS (GPT-4 Level)</option>
+                            <option value="100">100 TOKENS (O1-Reasoning)</option>
+                        </select>
+                    </div>
+                    <button id="infer-btn">INFER (SPIN)</button>
+                    <div class="auto-control">
+                        <label>RECURSIVE LOOP</label>
+                        <input type="checkbox" id="auto-spin">
+                    </div>
+                </div>
+            </div>
+
+            <aside class="sidebar">
+                <h3>MODEL STATUS</h3>
+                <div id="log-container">
+                    <div class="log-entry">System initialized...</div>
+                    <div class="log-entry">Awaiting prompt...</div>
+                </div>
+            </aside>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 AI-HYP-CORP. "Hallucinations are a feature, not a bug."</p>
+        </footer>
+    </div>
+    <script src="icons.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
