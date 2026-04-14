@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Token Burner - AI Inference Engine</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="mainframe">
+        <header>
+            <h1>TOKEN BURNER v1.0</h1>
+            <p class="subtitle">"Where GPUs go to die."</p>
+        </header>
+
+        <section class="status-panel">
+            <div class="status-item">
+                <span class="label">COMPUTE TOKENS:</span>
+                <span id="token-count" class="value">1000</span>
+            </div>
+            <div class="status-item">
+                <span class="label">LATENCY:</span>
+                <span id="latency" class="value">0ms</span>
+            </div>
+        </section>
+
+        <main class="slot-machine">
+            <div class="reels-container">
+                <div class="reel" id="reel-1">
+                    <div class="symbols"></div>
+                </div>
+                <div class="reel" id="reel-2">
+                    <div class="symbols"></div>
+                </div>
+                <div class="reel" id="reel-3">
+                    <div class="symbols"></div>
+                </div>
+            </div>
+            <div class="controls">
+                <button id="spin-button">GENERATE OUTPUT</button>
+                <p class="cost-info">COST: 10 TOKENS / INFERENCE</p>
+            </div>
+        </main>
+
+        <aside class="console">
+            <div class="console-header">SYSTEM LOGS</div>
+            <div id="log-output" class="log-output">
+                <p>> Initializing Neural Weights...</p>
+                <p>> Loading Synthetic Data...</p>
+                <p>> Ready for Inference.</p>
+            </div>
+        </aside>
+
+        <footer>
+            <p>DISCLAIMER: This model may hallucinate jackpots. No GPUs were (excessively) harmed.</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
