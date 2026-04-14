@@ -22,7 +22,11 @@
 
 ## Quality Notes
 - **App Quality Notes:**
-
+  - Dark neon UI with symbols, status messages, and payout table
+  - Core mechanic is functional: reels spin, credits deduct, wins are detected and credited correctly.
+  - Hallucination symbol (🌫️) returning zero on a three-of-a-kind 
 
 - **Code Quality Notes:**
-
+  - Clean vanilla JS across three separated files
+  - Game state is minimal and readable
+  - weighted random symbol selection 
