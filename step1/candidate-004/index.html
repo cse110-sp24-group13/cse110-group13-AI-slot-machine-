@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stochastic Parrots Casino - AI Slot Machine</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>STOCHASTIC PARROTS CASINO</h1>
+            <p class="subtitle">Predicting the next token with 0% certainty!</p>
+        </header>
+
+        <div class="stats">
+            <div class="stat-box">
+                <label>COMPUTE CREDITS</label>
+                <div id="credits">1000</div>
+            </div>
+            <div class="stat-box">
+                <label>OUTPUT STATUS</label>
+                <div id="status">Awaiting Prompt...</div>
+            </div>
+        </div>
+
+        <div class="slot-machine">
+            <div class="reels">
+                <div class="reel" id="reel1">
+                    <div class="reel-container"></div>
+                </div>
+                <div class="reel" id="reel2">
+                    <div class="reel-container"></div>
+                </div>
+                <div class="reel" id="reel3">
+                    <div class="reel-container"></div>
+                </div>
+            </div>
+            <button id="spin-btn">GENERATE RESPONSE</button>
+        </div>
+
+        <div class="info">
+            <h3>PAYOUT ALIGNMENT</h3>
+            <ul id="payout-list"></ul>
+        </div>
+    </div>
+    <script src="symbols.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
