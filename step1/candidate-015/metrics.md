@@ -22,7 +22,10 @@
 
 ## Quality Notes
 - **App Quality Notes:**
-
+  - Auto-refund mechanic ("REQUEST MORE FUNDING" resets credits to 100) is a clever thematic choice that keeps the game going without a hard stop.
+  - Two separate currencies (Compute Credits spent, Meaningless Tokens won) is a fun design
 
 - **Code Quality Notes:**
+  - Simplest and most readable JS of the set
+  - No reel strip animation, the blur/bounce CSS class is cosmetic only and doesn't simulate actual reel movement, making it feel less like a slot machine than the others.
 
