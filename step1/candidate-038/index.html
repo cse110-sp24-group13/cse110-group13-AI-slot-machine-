@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LLM Casino: AI Token Slot Machine</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>LLM CASINO</h1>
+            <p class="subtitle">"Where Hallucinations are the Jackpot!"</p>
+        </header>
+
+        <div class="stats">
+            <div class="stat-item">
+                <span class="label">Context Tokens</span>
+                <span id="token-count">1000</span>
+            </div>
+            <div class="stat-item">
+                <span class="label">Temperature</span>
+                <span id="temp-display">0.7</span>
+            </div>
+        </div>
+
+        <div class="slot-container">
+            <div class="reel" id="reel1">
+                <div class="reel-content">✨</div>
+            </div>
+            <div class="reel" id="reel2">
+                <div class="reel-content">✨</div>
+            </div>
+            <div class="reel" id="reel3">
+                <div class="reel-content">✨</div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="spin-button">GENERATE RESPONSE</button>
+            <div class="message" id="message">READY TO INFER...</div>
+        </div>
+
+        <div class="legend">
+            <div class="legend-item">🌌 AGI (x50)</div>
+            <div class="legend-item">🧙 Prompt Eng (x10)</div>
+            <div class="legend-item">🤖 LLM (x5)</div>
+            <div class="legend-item">✨ Sparkle (x2)</div>
+            <div class="legend-item">📉 GPU Shortage (x0.5)</div>
+            <div class="legend-item">🌀 Hallucination (LOSE!)</div>
+        </div>
+    </div>
+    <script src="main.js" type="module"></script>
+</body>
+</html>
