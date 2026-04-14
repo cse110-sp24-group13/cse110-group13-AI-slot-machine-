@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Token Grinder v1.0 (Beta)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI TOKEN GRINDER</h1>
+            <p class="subtitle">v1.0.0-rc1 (UNSTABLE)</p>
+        </header>
+
+        <div class="stats">
+            <div class="stat-box">
+                <span class="label">COMPUTE CREDITS:</span>
+                <span id="credits" class="value">100</span>
+            </div>
+            <div class="stat-box">
+                <span class="label">GPU TEMPERATURE:</span>
+                <span id="temp" class="value">42°C</span>
+            </div>
+        </div>
+
+        <div class="slot-machine">
+            <div class="reel" id="reel1">
+                <div class="symbol">🤖</div>
+            </div>
+            <div class="reel" id="reel2">
+                <div class="symbol">🤖</div>
+            </div>
+            <div class="reel" id="reel3">
+                <div class="symbol">🤖</div>
+            </div>
+        </div>
+
+        <div class="message-box">
+            <p id="message">> Initializing neural weights...</p>
+        </div>
+
+        <div class="controls">
+            <button id="spin-btn">BURN CREDITS (5)</button>
+            <button id="reset-btn">RAISE MORE HYPE</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
