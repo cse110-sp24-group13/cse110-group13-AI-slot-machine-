@@ -2,12 +2,12 @@
 | :--- | :--- |
 | Run ID | candidate-043 |
 | Timestamp | Tuesday, April 14, 2026 |
-| Model+version string | Gemini 2.0 Flash |
-| Input tokens | 4872 |
-| Output tokens | 2245 |
-| Total tokens | 7117 |
-| Wall-clock time(s) | 85.4 |
-| Tool-reported time(s) | 12.8 |
+| Model+version string | gemini-3-falsh-preview |
+| Input tokens | 86,473 |
+| Output tokens | 8,095 |
+| Total tokens | 180,692 |
+| Wall-clock time(s) | 279 s |
+| Tool-reported time(s) | 32 s |
 | Files produced | index.html, style.css, script.js, plans/ai-slot-machine.md |
 | Lines of code | 519 |
 | Runs in browser? | Yes |
