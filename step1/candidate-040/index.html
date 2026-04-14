@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Token Burner - Slot Machine</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header>
+            <h1>AI TOKEN <span class="accent">BURNER</span></h1>
+            <div class="balance-container">
+                <span class="label">Tokens:</span>
+                <span id="balance">1000</span>
+            </div>
+        </header>
+
+        <main>
+            <div class="slot-machine">
+                <div class="reel-window">
+                    <div id="reel-1" class="reel">
+                        <!-- Symbols injected by JS -->
+                    </div>
+                </div>
+                <div class="reel-window">
+                    <div id="reel-2" class="reel">
+                        <!-- Symbols injected by JS -->
+                    </div>
+                </div>
+                <div class="reel-window">
+                    <div id="reel-3" class="reel">
+                        <!-- Symbols injected by JS -->
+                    </div>
+                </div>
+                <div class="scanline"></div>
+            </div>
+
+            <div class="controls">
+                <button id="spin-btn" class="generate-btn">GENERATE OUTCOME</button>
+            </div>
+
+            <div class="status-panel">
+                <div class="status-header">SYSTEM STATUS:</div>
+                <div id="status-log" class="status-log">Initializing Model... [READY]</div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Parody of the AI Industry | No Real Value</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

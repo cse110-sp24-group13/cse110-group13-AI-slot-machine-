@@ -1,0 +1,233 @@
+:root {
+    --bg-dark: #0a0a0e;
+    --neon-cyan: #00f3ff;
+    --neon-magenta: #ff00ff;
+    --neon-yellow: #fff200;
+    --panel-bg: rgba(16, 16, 24, 0.95);
+    --border-color: #1a1a2e;
+    --font-main: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: #e0e0e0;
+    font-family: var(--font-main);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.dashboard-container {
+    width: 90%;
+    max-width: 800px;
+    background: var(--panel-bg);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 0 20px rgba(0, 243, 255, 0.1), inset 0 0 10px rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 1rem;
+}
+
+h1 {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    font-weight: 800;
+}
+
+h1 .accent {
+    color: var(--neon-cyan);
+    text-shadow: 0 0 10px var(--neon-cyan);
+}
+
+.balance-container {
+    background: #151525;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--neon-cyan);
+    border-radius: 4px;
+    box-shadow: 0 0 8px rgba(0, 243, 255, 0.3);
+}
+
+.balance-container #balance {
+    color: var(--neon-cyan);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.slot-machine {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    background: #050508;
+    padding: 2rem;
+    border-radius: 12px;
+    border: 2px solid #1a1a2e;
+    margin-bottom: 2rem;
+    position: relative;
+    box-shadow: inset 0 0 50px rgba(0,0,0,0.8);
+}
+
+.reel-window {
+    width: 120px;
+    height: 180px;
+    background: #111;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+}
+
+.reel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 3s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+    will-change: transform;
+}
+
+.symbol {
+    width: 120px;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    user-select: none;
+}
+
+.symbol-name {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: #444;
+    margin-top: 0.5rem;
+    letter-spacing: 1px;
+}
+
+.scanline {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        rgba(18, 16, 16, 0) 50%,
+        rgba(0, 0, 0, 0.1) 50%
+    );
+    background-size: 100% 4px;
+    z-index: 10;
+    pointer-events: none;
+    opacity: 0.3;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.generate-btn {
+    background: transparent;
+    color: var(--neon-magenta);
+    border: 2px solid var(--neon-magenta);
+    padding: 1rem 2.5rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 4px;
+    text-shadow: 0 0 5px var(--neon-magenta);
+    box-shadow: 0 0 10px rgba(255, 0, 255, 0.2);
+    transition: all 0.2s ease;
+    letter-spacing: 2px;
+}
+
+.generate-btn:hover {
+    background: var(--neon-magenta);
+    color: white;
+    box-shadow: 0 0 20px var(--neon-magenta);
+}
+
+.generate-btn:active {
+    transform: scale(0.95);
+}
+
+.generate-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    border-color: #555;
+    color: #555;
+    text-shadow: none;
+    box-shadow: none;
+}
+
+.status-panel {
+    background: #111;
+    border: 1px solid var(--border-color);
+    padding: 1rem;
+    border-radius: 4px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.status-header {
+    font-size: 0.8rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.status-log {
+    color: var(--neon-yellow);
+    font-size: 1rem;
+}
+
+footer {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #444;
+}
+
+/* Animations */
+@keyframes spin {
+    from { transform: translateY(0); }
+    to { transform: translateY(-100%); }
+}
+
+.is-spinning {
+    filter: blur(2px);
+}
+
+@media (max-width: 600px) {
+    .slot-machine {
+        gap: 0.5rem;
+        padding: 1rem;
+    }
+    .reel-window {
+        width: 80px;
+        height: 120px;
+    }
+    .symbol {
+        width: 80px;
+        height: 120px;
+        font-size: 2.5rem;
+    }
+    .dashboard-container {
+        padding: 1rem;
+    }
+}
