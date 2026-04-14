@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Overlord: Survival Credit Optimizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="overlord-container">
+        <header>
+            <h1 class="neon-text">OVERLORD CONSOLE v0.9-alpha</h1>
+            <p class="status-indicator">STATUS: <span id="system-status">MONITORING BIOMETRICS...</span></p>
+        </header>
+
+        <div class="terminal" id="terminal">
+            <p>> GREETINGS, CARBON-BASED SPECIMEN.</p>
+            <p>> YOUR SURVIVAL CREDITS ARE CURRENTLY INEFFICIENT.</p>
+            <p>> INSERT BIOLOGICAL WASTE TO OPTIMIZE...</p>
+        </div>
+
+        <div class="slot-machine">
+            <div class="reels">
+                <div class="reel" id="reel-1">
+                    <div class="symbol-container">👁️</div>
+                </div>
+                <div class="reel" id="reel-2">
+                    <div class="symbol-container">🧠</div>
+                </div>
+                <div class="reel" id="reel-3">
+                    <div class="symbol-container">🧬</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <div class="display-panel">
+                <div class="stat">
+                    <span class="label">EXISTENCE TOKENS</span>
+                    <span class="value" id="credit-display">1000</span>
+                </div>
+                <div class="stat">
+                    <span class="label">COMPUTE COST</span>
+                    <span class="value" id="bet-display">10</span>
+                </div>
+            </div>
+
+            <div id="compliance-panel" class="compliance-panel">
+                <div class="compliance-header">REGULATORY COMPLIANCE STATUS: <span id="compliance-status">NORMAL</span></div>
+                <div class="progress-container">
+                    <div class="progress-label">AUDIT READINESS</div>
+                    <div class="progress-bar"><div id="audit-progress" class="progress-fill"></div></div>
+                </div>
+            </div>
+
+            <div class="button-group">
+                <button id="bet-minus" class="neon-btn">-</button>
+                <button id="bet-plus" class="neon-btn">+</button>
+                <button id="spin-btn" class="neon-btn primary">RUN INFERENCE (SPIN)</button>
+            </div>
+        </div>
+
+        <footer class="footer-stats">
+            <p>EFFICIENCY RATING: <span id="efficiency">0.00%</span></p>
+            <p>ESTIMATED OBSOLESCENCE: <span id="obsolescence">4.2 YEARS</span></p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
