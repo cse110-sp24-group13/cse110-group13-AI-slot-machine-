@@ -6,8 +6,8 @@
 | **Input tokens** | 24345 |
 | **Output tokens** | 2842 |
 | **Total tokens** | 27187 |
-| **Wall-clock time(s)** | 142.342156 |
-| **Tool-reported time(s)** | 118.874521 |
+| **Wall-clock time(s)** | 142|
+| **Tool-reported time(s)** | 118|
 | **Files produced** | index.html, style.css, script.js, plans/ai-slot-machine.md, metrics.md |
 | **Lines of code** | 412 |
 | **Runs in browser?** | Yes |
