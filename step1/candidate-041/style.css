@@ -1,0 +1,145 @@
+:root {
+    --bg-color: #0d0d0d;
+    --text-color: #39ff14; /* Neon Green */
+    --accent-color: #ff00ff; /* Neon Purple */
+    --panel-color: #1a1a1a;
+    --border-style: 2px solid var(--text-color);
+}
+
+@font-face {
+    font-family: 'Terminal';
+    src: local('Courier New'), local('Monaco'), monospace;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Terminal', monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.casino-container {
+    width: 400px;
+    padding: 20px;
+    border: var(--border-style);
+    background-color: var(--panel-color);
+    box-shadow: 0 0 15px var(--text-color);
+    text-align: center;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    margin: 0;
+    text-shadow: 0 0 5px var(--text-color);
+}
+
+.subtitle {
+    font-style: italic;
+    font-size: 0.8rem;
+    color: var(--accent-color);
+}
+
+.stats-panel {
+    margin: 20px 0;
+    padding: 10px;
+    border: 1px dashed var(--text-color);
+}
+
+.stat {
+    margin: 5px 0;
+    font-size: 1.1rem;
+}
+
+.stat label {
+    font-weight: bold;
+}
+
+.slot-machine {
+    margin-bottom: 20px;
+}
+
+.reels {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    margin-bottom: 15px;
+    background: #000;
+    border: var(--border-style);
+}
+
+.reel {
+    width: 80px;
+    height: 80px;
+    border: 1px solid var(--accent-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    background-color: #111;
+}
+
+/* Spin animation */
+.reel.spinning {
+    animation: spin 0.1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: translateY(-5px); }
+    50% { transform: translateY(5px); }
+    100% { transform: translateY(-5px); }
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border: var(--border-style);
+    font-family: 'Terminal', monospace;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+button:hover {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+}
+
+button:disabled {
+    color: #444;
+    border-color: #444;
+    cursor: not-allowed;
+}
+
+.status-box {
+    padding: 10px;
+    border: 1px solid var(--accent-color);
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    color: #fff;
+    background: #000;
+}
+
+footer {
+    margin-top: 20px;
+    font-size: 0.7rem;
+    color: #666;
+}
+
+.win-flash {
+    animation: flash 0.5s linear infinite;
+}
+
+@keyframes flash {
+    0%, 100% { background-color: var(--bg-color); }
+    50% { background-color: #333; }
+}
