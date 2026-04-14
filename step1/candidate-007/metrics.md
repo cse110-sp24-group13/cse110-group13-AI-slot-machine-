@@ -7,7 +7,7 @@ Total Tokens: 136,163
 Wall-clock times(s): 8m 22s
 Tool-reported time(s): 2m 7s (60.9%)  
 Files produced: index.html, style.css, script.js
-Lines of code: 362
+Lines of code: 436
 Runs in browser?: Yes
 App Quality Notes: Is a high-quality futuristic aesthetic AI gambling app, that produces random emojis, and allows you to change the total betting worth.
 Code Quality Notes: Clean vanilla JS; state-driven UI; CSS variables used for theme swapping; clear separation of concerns.
