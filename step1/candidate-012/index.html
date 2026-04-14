@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Stochastic Parrots' Payday | AI Slot Machine</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>THE STOCHASTIC PARROTS' PAYDAY</h1>
+            <p class="subtitle">Turning Venture Capital into Hallucinations since 2023</p>
+        </header>
+
+        <main class="cabinet">
+            <div class="stats-bar">
+                <div class="stat">
+                    <span class="label">VC SEED (TOKENS):</span>
+                    <span id="token-count" class="value">1000</span>
+                </div>
+                <div class="stat">
+                    <span class="label">STOCHASTICITY:</span>
+                    <span id="stochasticity-index" class="value">HIGH</span>
+                </div>
+            </div>
+
+            <div class="slot-machine">
+                <div class="reels-container" id="reels">
+                    <div class="reel" id="reel-1">
+                        <div class="symbol-strip">🤖</div>
+                    </div>
+                    <div class="reel" id="reel-2">
+                        <div class="symbol-strip">📎</div>
+                    </div>
+                    <div class="reel" id="reel-3">
+                        <div class="symbol-strip">📼</div>
+                    </div>
+                </div>
+                <div class="payline"></div>
+            </div>
+
+            <div class="controls">
+                <div class="bet-control">
+                    <label for="bet-amount">INFERENCE COST:</label>
+                    <select id="bet-amount">
+                        <option value="10">10 Tokens (Small Language Model)</option>
+                        <option value="50">50 Tokens (Parameter Dense)</option>
+                        <option value="100">100 Tokens (Foundational Overkill)</option>
+                    </select>
+                </div>
+                <button id="spin-button" class="btn-inference">RUN INFERENCE</button>
+            </div>
+        </main>
+
+        <section class="terminal">
+            <div class="terminal-header">LOGS::STOCHASTIC_ENGINE</div>
+            <div id="message-log" class="terminal-body">
+                <div class="log-entry">> Initializing weights...</div>
+                <div class="log-entry">> Scouring the internet for copyrighted data...</div>
+                <div class="log-entry">> Ready for inference.</div>
+            </div>
+        </section>
+
+        <footer>
+            <p>Non-deterministic. Emergent properties not guaranteed. No actual AGI was created in the making of this slot machine.</p>
+        </footer>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
