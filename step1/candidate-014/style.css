@@ -1,0 +1,239 @@
+:root {
+    --bg-color: #0d0d0d;
+    --primary-color: #00ffcc;
+    --secondary-color: #ff007b;
+    --accent-color: #7b00ff;
+    --text-color: #e0e0e0;
+    --panel-bg: rgba(255, 255, 255, 0.05);
+    --border-color: rgba(255, 255, 255, 0.1);
+    --neon-shadow: 0 0 10px rgba(0, 255, 204, 0.5);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 3rem;
+    letter-spacing: 0.2rem;
+}
+
+.neon-text {
+    color: var(--primary-color);
+    text-shadow: var(--neon-shadow);
+}
+
+.subtitle {
+    opacity: 0.6;
+    margin-top: 0.5rem;
+}
+
+/* Slot Machine Styles */
+.slot-machine {
+    background: var(--panel-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.reels-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    height: 150px;
+    position: relative;
+    overflow: hidden;
+}
+
+.reel {
+    width: 120px;
+    height: 150px;
+    background: rgba(0,0,0,0.3);
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.reel-strip {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    transition: transform 3s cubic-bezier(0.1, 0, 0, 1);
+}
+
+.symbol {
+    height: 150px;
+    min-height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+}
+
+.win-line {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, var(--secondary-color), transparent);
+    box-shadow: 0 0 15px var(--secondary-color);
+    transform: translateY(-50%);
+    pointer-events: none;
+    z-index: 5;
+    opacity: 0.3;
+}
+
+/* Stats Styles */
+.stats-panel {
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+}
+
+.stat-box {
+    text-align: center;
+    background: rgba(0,0,0,0.4);
+    padding: 1rem;
+    border-radius: 10px;
+    flex: 1;
+    border: 1px solid var(--border-color);
+}
+
+.stat-box label {
+    display: block;
+    font-size: 0.7rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.1rem;
+}
+
+.stat-box .value {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Controls */
+.controls {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 1.2rem 2.5rem;
+    font-size: 1rem;
+    font-family: inherit;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+button:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    border-color: #444;
+    color: #444;
+}
+
+.glow-on-hover:hover:not(:disabled) {
+    background: var(--primary-color);
+    color: var(--bg-color);
+    box-shadow: 0 0 20px var(--primary-color);
+}
+
+/* Terminal Styles */
+.terminal-container {
+    background: #000;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+}
+
+.terminal-header {
+    background: #222;
+    padding: 5px 10px;
+    font-size: 0.7rem;
+    color: #888;
+}
+
+.terminal-body {
+    height: 120px;
+    overflow-y: auto;
+    padding: 10px;
+    font-size: 0.8rem;
+    line-height: 1.4;
+    color: #00ff00; /* Classic green terminal */
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.log-entry {
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateX(-5px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+footer {
+    text-align: center;
+    font-size: 0.7rem;
+    opacity: 0.4;
+    padding-bottom: 1rem;
+}
+
+/* Animations */
+.win-animate {
+    animation: winFlash 0.5s ease-in-out infinite;
+}
+
+@keyframes winFlash {
+    0% { background: var(--panel-bg); }
+    50% { background: rgba(0, 255, 204, 0.2); }
+    100% { background: var(--panel-bg); }
+}
+
+.win-line-active {
+    opacity: 1 !important;
+    height: 6px !important;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGI Accelerator | Compute Credits Slot</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AGI <span class="neon-text">ACCELERATOR</span></h1>
+            <p class="subtitle">Predicting the future, one token at a time.</p>
+        </header>
+
+        <main class="slot-machine">
+            <div class="reels-container">
+                <div class="reel" id="reel1">
+                    <div class="reel-strip" id="strip1"></div>
+                </div>
+                <div class="reel" id="reel2">
+                    <div class="reel-strip" id="strip2"></div>
+                </div>
+                <div class="reel" id="reel3">
+                    <div class="reel-strip" id="strip3"></div>
+                </div>
+                <div class="win-line"></div>
+            </div>
+
+            <div class="stats-panel">
+                <div class="stat-box">
+                    <label>COMPUTE CREDITS</label>
+                    <div id="balance" class="value">100</div>
+                </div>
+                <div class="stat-box">
+                    <label>LAST REWARD</label>
+                    <div id="last-win" class="value">0</div>
+                </div>
+            </div>
+
+            <div class="controls">
+                <button id="spin-btn" class="glow-on-hover">EXECUTE SPIN (10 Credits)</button>
+                <button id="reset-btn" class="glow-on-hover" style="display: none; border-color: var(--secondary-color); color: var(--secondary-color);">REQUEST SERIES B FUNDING</button>
+            </div>
+        </main>
+
+        <section class="terminal-container">
+            <div class="terminal-header">SYSTEM LOG [AGI-v0.1-alpha]</div>
+            <div id="terminal" class="terminal-body">
+                <div class="log-entry">> Booting up...</div>
+                <div class="log-entry">> Initializing neural hype engine...</div>
+                <div class="log-entry">> Waiting for user input...</div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 OpenAI (Actually, just a parody). Not responsible for total AGI-driven societal collapse.</p>
+        </footer>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
