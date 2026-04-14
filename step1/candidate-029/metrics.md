@@ -3,7 +3,7 @@
 | Metric | Value |
 | :--- | :--- |
 | **Run ID** | candidate-029 |
-| **Timestamp** | Monday, April 13, 2026, 12:45:00 PM |
+| **Timestamp** | 2026-04-13 20:10:18|
 | **Model + Version String** | gemini-3-flash-preview |
 | **Input Tokens** | 145,736 |
 | **Output Tokens** | 8,409 |
