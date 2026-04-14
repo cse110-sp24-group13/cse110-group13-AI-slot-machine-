@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Token-Burner 3000 | AI Slot Machine</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>TOKEN-BURNER 3000</h1>
+            <p class="subtitle">Disrupting your savings. Scaling your losses.</p>
+        </header>
+
+        <main>
+            <div class="stats-panel">
+                <div class="stat">
+                    <span class="label">VC FUNDING (TOKENS)</span>
+                    <span id="token-balance" class="value">1000</span>
+                </div>
+                <div class="stat">
+                    <span class="label">LAST PAYOUT</span>
+                    <span id="last-payout" class="value">0</span>
+                </div>
+            </div>
+
+            <div class="slot-machine">
+                <div class="reels-container">
+                    <div class="reel" id="reel-1">
+                        <div class="symbol-container">
+                            <span class="symbol">🤖</span>
+                        </div>
+                    </div>
+                    <div class="reel" id="reel-2">
+                        <div class="symbol-container">
+                            <span class="symbol">🧠</span>
+                        </div>
+                    </div>
+                    <div class="reel" id="reel-3">
+                        <div class="symbol-container">
+                            <span class="symbol">🔌</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="machine-bottom"></div>
+            </div>
+
+            <div class="controls">
+                <button id="spin-button">RUN INFERENCE (50 TOKENS)</button>
+            </div>
+
+            <div class="console">
+                <div class="console-header">MODEL STATUS: ONLINE</div>
+                <div id="console-output" class="console-text">
+                    [SYSTEM] Initializing weights...<br>
+                    [SYSTEM] Alignment complete (I'm in charge).<br>
+                    [SYSTEM] Ready for your tokens.
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Unaligned Intelligence Inc. | "Move fast and burn things."</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
