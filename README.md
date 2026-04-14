@@ -1,2 +1,6 @@
 # cse110-group13-AI-slot-machine-
-The one arm ai slot machine experiment 
+
+## Model
+Gemini-2.5-Pro
+## Harness
+Terminal - Gemini CLI 
