@@ -3,13 +3,13 @@
 | Metric | Value |
 | :--- | :--- |
 | **Run ID** | candidate-042 |
-| **Timestamp** | Tuesday, April 14, 2026, 11:30 AM (UTC) |
-| **Model+version string** | gemini-2.0-flash |
-| **Input Tokens** | 10452 |
-| **Output Tokens** | 2108 |
-| **Total Tokens** | 12560 |
-| **Wall-clock time(s)** | 48.52 |
-| **Tool-reported time(s)** | 3.12 |
+| **Timestamp** | 2026-04-14 12:07:23 |
+| **Model+version string** | gemini-3-flash-preview |
+| **Input Tokens** | 190,625 |
+| **Output Tokens** | 6,097 |
+| **Total Tokens** | 190,625 |
+| **Wall-clock time(s)** | 348s |
+| **Tool-reported time(s)** | 122s |
 | **Files Produced** | index.html, style.css, script.js |
 | **Lines of Code** | 374 (52 HTML, 171 CSS, 151 JS) |
 | **Runs in browser?** | YES (Standard HTML5/CSS3/ES6+) |
