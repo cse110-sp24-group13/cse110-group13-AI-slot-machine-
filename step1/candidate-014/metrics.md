@@ -17,7 +17,7 @@
 ## Output
 - **Files Produced (count): 4** 
 - **Files Produced (names): index.html, app.js, style.css, DESIGN.md** 
-- **Lines of Code: 451 ** 
+- **Lines of Code: 512 ** 
 - **Runs in Browser: Yes** 
 
 ## Quality Notes
