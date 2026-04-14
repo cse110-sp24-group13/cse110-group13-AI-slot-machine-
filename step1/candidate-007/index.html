@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI TOKEN SINK</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="crt">
+    <div class="overlay"></div>
+    <div class="container">
+        <header class="glitch-header" data-text="AI TOKEN SINK">AI TOKEN SINK</header>
+        
+        <div class="stats">
+            <div class="stat-box">
+                <span class="label">COMPUTE CREDITS:</span>
+                <span id="token-count" class="value pulse">1000.00</span>
+            </div>
+            <div class="stat-box">
+                <span class="label">HYPE MULTIPLIER:</span>
+                <span id="multiplier" class="value">x1.0</span>
+            </div>
+        </div>
+
+        <div class="slot-machine">
+            <div class="reels">
+                <div class="reel" id="reel1">🤖</div>
+                <div class="reel" id="reel2">🤖</div>
+                <div class="reel" id="reel3">🤖</div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="spin-btn" class="btn">GENERATE RESPONSE</button>
+            <div class="stake-control">
+                <span>STAKE:</span>
+                <input type="number" id="stake" value="10" min="1" step="10">
+            </div>
+        </div>
+
+        <div class="terminal">
+            <div class="terminal-header">SYSTEM_LOGS_v1.0.42_STABLE</div>
+            <div id="terminal-content" class="terminal-content">
+                <div>[INFO] Initializing Weights...</div>
+                <div>[INFO] Bypassing Safety Filters...</div>
+                <div>[INFO] Waiting for VC Input...</div>
+                <div>[READY] Awaiting Prompt...</div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

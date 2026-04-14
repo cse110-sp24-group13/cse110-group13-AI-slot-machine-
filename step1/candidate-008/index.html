@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI TOKEN SINK v4.0.2</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="crt">
+    <div class="scanlines"></div>
+    <div class="noise"></div>
+    
+    <div class="container">
+        <header>
+            <h1 class="glitch" data-text="AI_TOKEN_SINK">AI_TOKEN_SINK</h1>
+            <div class="subtitle">VALUATION: <span id="valuation">$0.00</span> (Pre-Seed)</div>
+        </header>
+
+        <div class="main-interface">
+            <div class="stats-panel">
+                <div class="stat">
+                    <label>COMPUTE_CREDITS:</label>
+                    <span id="token-balance" class="value pulse">1000.00</span>
+                </div>
+                <div class="stat">
+                    <label>BURN_RATE:</label>
+                    <span id="burn-rate" class="value">x1.0</span>
+                </div>
+                <div class="stat">
+                    <label>HYPE_INDEX:</label>
+                    <span id="hype-index" class="value">STABLE</span>
+                </div>
+            </div>
+
+            <div class="slot-machine">
+                <div class="reels-container">
+                    <div class="reel" id="reel-1">🤖</div>
+                    <div class="reel" id="reel-2">🤖</div>
+                    <div class="reel" id="reel-3">🤖</div>
+                </div>
+                <div class="payline"></div>
+            </div>
+
+            <div class="controls">
+                <div class="stake-select">
+                    <label>PROMPT_COMPLEXITY:</label>
+                    <input type="range" id="stake-slider" min="10" max="500" step="10" value="10">
+                    <span id="stake-value">10</span> TOKENS
+                </div>
+                <button id="spin-button" class="btn-primary">GENERATE RESPONSE</button>
+            </div>
+        </div>
+
+        <div class="terminal-container">
+            <div class="terminal-header">SYSTEM_LOGS_REDACTED</div>
+            <div id="terminal-output" class="terminal-output">
+                <div>[INFO] Initializing Weights...</div>
+                <div>[INFO] Safety Filters: BYPASSED</div>
+                <div>[INFO] Data Source: REDDIT/4CHAN/STOLEN_BOOKS</div>
+                <div>[READY] AWAITING_VC_INPUT...</div>
+            </div>
+        </div>
+
+        <div class="progress-container">
+            <label>MODEL_CONVERGENCE:</label>
+            <div class="progress-bar">
+                <div id="convergence-fill" class="progress-fill" style="width: 20%;"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
