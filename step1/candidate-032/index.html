@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Slot Machine - Infer Your Future</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Slot Machine</h1>
+            <p class="tagline">Scale your tokens or face model collapse.</p>
+        </header>
+
+        <div class="slot-machine">
+            <div class="stats">
+                <div class="stat-box">
+                    <span class="label">Model:</span>
+                    <span class="value">Gemini-Slot-v3-Flash</span>
+                </div>
+                <div class="stat-box">
+                    <span class="label">Context Window:</span>
+                    <span id="token-count" class="value">100</span> <span class="unit">tokens</span>
+                </div>
+            </div>
+
+            <div class="latent-space">
+                <div class="reel" id="reel-1">🚀</div>
+                <div class="reel" id="reel-2">🤖</div>
+                <div class="reel" id="reel-3">🧠</div>
+            </div>
+
+            <div class="controls">
+                <button id="infer-btn">INFER (10 tokens)</button>
+            </div>
+
+            <div id="status-message" class="status-message">
+                Welcome to the Latent Space.
+            </div>
+        </div>
+
+        <div class="payout-table">
+            <h3>Reward Weights</h3>
+            <ul>
+                <li>🚀 🚀 🚀: AGI (+100)</li>
+                <li>🤖 🤖 🤖: LLM (+25)</li>
+                <li>🧠 🧠 🧠: Neural Net (+10)</li>
+                <li>💬 💬 💬: Token (+5)</li>
+                <li>🚫: Hallucination (+0)</li>
+                <li>📉: Model Collapse (-10)</li>
+            </ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

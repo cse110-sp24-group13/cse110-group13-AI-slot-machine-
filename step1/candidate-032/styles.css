@@ -1,0 +1,168 @@
+:root {
+    --bg-color: #0d0d12;
+    --text-color: #e0e0e0;
+    --accent-color: #00ffcc;
+    --danger-color: #ff3366;
+    --secondary-bg: #1a1a24;
+    --border-color: #33334d;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    max-width: 500px;
+    width: 90%;
+    padding: 2rem;
+    background-color: var(--secondary-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.1);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    color: var(--accent-color);
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.tagline {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.slot-machine {
+    background-color: var(--bg-color);
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.stat-box {
+    flex: 1;
+    padding: 0.5rem;
+    border: 1px solid var(--accent-color);
+    border-radius: 4px;
+    text-align: center;
+}
+
+.label {
+    font-weight: bold;
+}
+
+.value {
+    color: var(--accent-color);
+    font-size: 1.2rem;
+}
+
+.latent-space {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem 0;
+    margin-bottom: 1.5rem;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.reel {
+    font-size: 3rem;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secondary-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    transition: transform 0.1s ease-in-out;
+}
+
+.reel.spinning {
+    animation: spin 0.1s infinite alternate;
+}
+
+@keyframes spin {
+    from { transform: translateY(-5px); }
+    to { transform: translateY(5px); }
+}
+
+.controls {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+button {
+    background-color: transparent;
+    border: 2px solid var(--accent-color);
+    color: var(--accent-color);
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.2s;
+}
+
+button:hover:not(:disabled) {
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+}
+
+button:disabled {
+    border-color: #666;
+    color: #666;
+    cursor: not-allowed;
+}
+
+.status-message {
+    text-align: center;
+    font-size: 0.9rem;
+    min-height: 1.2rem;
+    color: var(--accent-color);
+}
+
+.status-message.error {
+    color: var(--danger-color);
+}
+
+.payout-table {
+    font-size: 0.8rem;
+    border-top: 1px solid var(--border-color);
+    padding-top: 1rem;
+}
+
+.payout-table h3 {
+    margin-top: 0;
+    text-align: center;
+    color: var(--accent-color);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+}
