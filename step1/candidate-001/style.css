@@ -1,0 +1,182 @@
+:root {
+    --bg-color: #0d1117;
+    --card-bg: #161b22;
+    --accent: #58a6ff;
+    --text: #c9d1d9;
+    --win-color: #3fb950;
+    --loss-color: #f85149;
+    --panel-border: #30363d;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.app-container {
+    width: 90%;
+    max-width: 600px;
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    border: 1px solid var(--panel-border);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    color: var(--accent);
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+}
+
+.subtitle {
+    font-size: 0.9rem;
+    opacity: 0.7;
+    text-transform: uppercase;
+}
+
+/* Slot Machine Styling */
+.reels-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    background: #010409;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 2px solid var(--panel-border);
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+
+.reel {
+    height: 150px;
+    background: #0d1117;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.reel-strip {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    transition: transform 3s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+}
+
+.symbol {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    flex-shrink: 0;
+}
+
+/* Controls */
+.controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.stat-box {
+    background: #21262d;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    border: 1px solid var(--panel-border);
+    font-weight: bold;
+}
+
+.label {
+    margin-right: 0.5rem;
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
+
+.value {
+    color: var(--accent);
+    font-size: 1.5rem;
+}
+
+.primary-btn {
+    background: var(--accent);
+    color: white;
+    border: none;
+    padding: 1rem 3rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
+    text-transform: uppercase;
+    box-shadow: 0 4px 15px rgba(88, 166, 255, 0.3);
+}
+
+.primary-btn:hover {
+    background: #1f6feb;
+    transform: translateY(-2px);
+}
+
+.primary-btn:active {
+    transform: translateY(0);
+}
+
+.primary-btn:disabled {
+    background: #30363d;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.status-box {
+    margin-top: 2rem;
+    text-align: center;
+    padding: 1rem;
+    border: 1px dashed var(--panel-border);
+    min-height: 3rem;
+    font-style: italic;
+    opacity: 0.9;
+}
+
+footer {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 0.75rem;
+    opacity: 0.5;
+}
+
+/* Animations */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+.shake {
+    animation: shake 0.1s linear infinite;
+}
+
+.win-flash {
+    color: var(--win-color) !important;
+    text-shadow: 0 0 10px var(--win-color);
+}

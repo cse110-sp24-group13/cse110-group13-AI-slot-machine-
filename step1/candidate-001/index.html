@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The AGI Oracle | AI Slot Machine</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>The AGI Oracle</h1>
+            <p class="subtitle">Generating Alpha via Stochastic Processes</p>
+        </header>
+
+        <main class="slot-machine">
+            <div class="reels-container">
+                <div class="reel" id="reel1">
+                    <div class="reel-strip"></div>
+                </div>
+                <div class="reel" id="reel2">
+                    <div class="reel-strip"></div>
+                </div>
+                <div class="reel" id="reel3">
+                    <div class="reel-strip"></div>
+                </div>
+            </div>
+
+            <div class="controls">
+                <div class="stat-box">
+                    <span class="label">Compute Credits:</span>
+                    <span id="credit-count" class="value">100</span>
+                </div>
+                <button id="generate-btn" class="primary-btn">Generate Prompt</button>
+            </div>
+
+            <div id="status-display" class="status-box">
+                Ready to optimize...
+            </div>
+        </main>
+
+        <footer>
+            <p>Built with synthetic data. Not investment advice.</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
