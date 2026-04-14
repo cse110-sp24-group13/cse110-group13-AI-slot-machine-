@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Slot Machine: Compute & Conquer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>AI SLOT MACHINE</h1>
+            <p class="subtitle">Burning GPU cycles for the sake of human amusement</p>
+        </header>
+
+        <main id="slot-machine">
+            <div id="stats">
+                <div class="stat-box">
+                    <span class="label">COMPUTE TOKENS</span>
+                    <span id="token-count" class="value">100</span>
+                </div>
+                <div class="stat-box">
+                    <span class="label">LAST WIN</span>
+                    <span id="last-win" class="value">0</span>
+                </div>
+            </div>
+
+            <div id="reels-container">
+                <div class="reel" id="reel-1">
+                    <div class="reel-strip"></div>
+                </div>
+                <div class="reel" id="reel-2">
+                    <div class="reel-strip"></div>
+                </div>
+                <div class="reel" id="reel-3">
+                    <div class="reel-strip"></div>
+                </div>
+                <div class="win-line"></div>
+            </div>
+
+            <div id="controls">
+                <button id="spin-btn">RUN PROMPT (-10 Tokens)</button>
+            </div>
+        </main>
+
+        <footer id="terminal">
+            <div class="terminal-header">SYSTEM_STATUS_v1.0.42</div>
+            <div id="terminal-output">
+                <p>> Initializing Neural Weights...</p>
+                <p>> Loading Bias Vectors...</p>
+                <p>> Awaiting User Intervention...</p>
+            </div>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

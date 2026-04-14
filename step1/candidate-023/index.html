@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Token Slot Machine</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>GEN<span class="highlight">SLOT</span> v4.0</h1>
+            <p class="subtitle">Optimize your context window</p>
+        </header>
+
+        <div class="machine-wrapper">
+            <div class="status-panel left">
+                <div class="stat-label">CONTEXT TOKENS</div>
+                <div id="token-balance" class="stat-value">1000</div>
+            </div>
+
+            <div class="slot-machine">
+                <div class="reels">
+                    <div class="reel" id="reel-1">
+                        <div class="reel-content">🤖</div>
+                    </div>
+                    <div class="reel" id="reel-2">
+                        <div class="reel-content">🧠</div>
+                    </div>
+                    <div class="reel" id="reel-3">
+                        <div class="reel-content">⚡</div>
+                    </div>
+                    <div class="overlay"></div>
+                </div>
+
+                <div class="controls">
+                    <div class="bet-control">
+                        <button id="bet-minus">-</button>
+                        <div class="bet-display">
+                            <span class="bet-label">COMPUTE COST</span>
+                            <span id="current-bet" class="bet-amount">50</span>
+                        </div>
+                        <button id="bet-plus">+</button>
+                    </div>
+                    <button id="spin-button">GENERATE RESPONSE</button>
+                </div>
+            </div>
+
+            <div class="status-panel right">
+                <div class="stat-label">GPU TEMP</div>
+                <div id="gpu-temp" class="stat-value">32°C</div>
+            </div>
+        </div>
+
+        <div class="terminal">
+            <div class="terminal-header">SYSTEM_LOG.txt</div>
+            <div id="message-log" class="terminal-content">
+                > Initializing weights...<br>
+                > Ready for inference.
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

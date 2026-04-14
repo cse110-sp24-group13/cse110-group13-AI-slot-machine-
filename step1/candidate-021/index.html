@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LLLM - Low-Level Luck Machine</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="crt-overlay">
+    <div class="container">
+        <header>
+            <h1>LLLM v1.0.0 (BETA)</h1>
+            <p class="subtitle">"Where hallucinations are just unplanned payouts."</p>
+        </header>
+
+        <div class="terminal-frame">
+            <div class="stats-bar">
+                <div class="stat-item">
+                    <span class="label">CONTEXT_TOKENS:</span>
+                    <span id="token-count" class="value">1000</span>
+                </div>
+                <div class="stat-item">
+                    <span class="label">GPU_TEMP:</span>
+                    <span id="temp-display" class="value">0.7</span>
+                </div>
+            </div>
+
+            <div class="slot-machine">
+                <div class="reels-container" id="reels">
+                    <div class="reel" id="reel-1"><div class="reel-strip"></div></div>
+                    <div class="reel" id="reel-2"><div class="reel-strip"></div></div>
+                    <div class="reel" id="reel-3"><div class="reel-strip"></div></div>
+                </div>
+                <div class="payline"></div>
+            </div>
+
+            <div class="controls">
+                <div class="control-group">
+                    <label for="temperature">TEMPERATURE (Volatility)</label>
+                    <input type="range" id="temperature" name="temperature" min="0" max="2" step="0.1" value="0.7">
+                </div>
+                <button id="spin-btn" class="neon-btn">PROMPT_SYSTEM</button>
+            </div>
+
+            <div class="terminal-log" id="log">
+                <div class="log-entry">> Initializing latent space...</div>
+                <div class="log-entry">> Connection to AGI established (Simulated).</div>
+                <div class="log-entry">> Cost per prompt: 10 Tokens.</div>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 OpenAI Casino - All hallucinations reserved.</p>
+        </footer>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Token Slot Machine - AGI or Bust</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>GEN-AI SLOT MACHINE</h1>
+            <div class="status-bar">
+                <span id="status-text">SYSTEM READY... ALIGNING WEIGHTS</span>
+            </div>
+        </header>
+
+        <main>
+            <div class="slot-machine">
+                <div class="reels">
+                    <div class="reel" id="reel1">
+                        <div class="reel-content">🤖</div>
+                    </div>
+                    <div class="reel" id="reel2">
+                        <div class="reel-content">🤖</div>
+                    </div>
+                    <div class="reel" id="reel3">
+                        <div class="reel-content">🤖</div>
+                    </div>
+                </div>
+                
+                <div class="controls">
+                    <div class="stats">
+                        <div class="stat-box">
+                            <label>COMPUTE TOKENS</label>
+                            <span id="token-count">1000</span>
+                        </div>
+                        <div class="stat-box">
+                            <label>INFERENCE COST</label>
+                            <span id="spin-cost">50</span>
+                        </div>
+                    </div>
+                    
+                    <button id="spin-button">GENERATE RESPONSE</button>
+                </div>
+            </div>
+        </main>
+
+        <aside class="log-panel">
+            <h2>OUTPUT LOG</h2>
+            <div id="event-log">
+                <p>> Initializing base model...</p>
+                <p>> Loading weights...</p>
+                <p>> Ready for inference.</p>
+            </div>
+        </aside>
+
+        <footer>
+            <p>Warning: Outcomes may contain hallucinations. Total loss of compute is possible.</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
