@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training Loop - AI Slot Machine</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard">
+        <header>
+            <h1>TRAINING_LOOP_v1.0.4</h1>
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="label">TOKEN_BALANCE:</span>
+                    <span id="balance" class="value">1000</span>
+                </div>
+                <div class="stat-item">
+                    <span class="label">CURRENT_LOSS:</span>
+                    <span id="loss" class="value">0.0000</span>
+                </div>
+            </div>
+        </header>
+
+        <main class="machine-container">
+            <div class="reels-container">
+                <div class="reel" id="reel-1"></div>
+                <div class="reel" id="reel-2"></div>
+                <div class="reel" id="reel-3"></div>
+                <div class="win-line"></div>
+            </div>
+
+            <div class="controls">
+                <div class="input-group">
+                    <label for="bet">BATCH_SIZE (BET):</label>
+                    <input type="number" id="bet" value="10" min="1" step="10">
+                </div>
+                <button id="spin-btn">TRAIN_EPOCH</button>
+            </div>
+        </main>
+
+        <aside class="log-panel">
+            <h2>SYSTEM_LOGS</h2>
+            <div id="logs" class="log-content">
+                <div class="log-entry">> Initializing neural network...</div>
+                <div class="log-entry">> GPU memory allocated: 100%.</div>
+                <div class="log-entry">> Ready for training.</div>
+            </div>
+        </aside>
+
+        <footer>
+            <button id="reset-btn" style="display: none;">REQUEST_GPU_GRANT (RESET)</button>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
