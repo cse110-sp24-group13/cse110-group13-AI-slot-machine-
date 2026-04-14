@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPT-Slot-v4.0 (Experimental Prototype)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>GPT-Slot-v4.0 <span class="tag">BETA</span></h1>
+            <p class="subtitle">Neural Network Architecture & Reward Optimization</p>
+        </header>
+
+        <section class="stats-bar">
+            <div class="stat-box">
+                <span class="label">Compute Tokens:</span>
+                <span id="tokens" class="value green">1000</span>
+            </div>
+            <div class="stat-box">
+                <span class="label">Loss Function:</span>
+                <span id="loss" class="value yellow">0.42</span>
+            </div>
+            <div class="stat-box">
+                <span class="label">Temperature:</span>
+                <span class="value cyan">0.7</span>
+            </div>
+        </section>
+
+        <main class="slot-machine">
+            <div class="reel-container">
+                <div class="reel" id="reel-1">
+                    <div class="reel-strip"></div>
+                </div>
+                <div class="reel" id="reel-2">
+                    <div class="reel-strip"></div>
+                </div>
+                <div class="reel" id="reel-3">
+                    <div class="reel-strip"></div>
+                </div>
+                <div class="win-line"></div>
+            </div>
+
+            <div class="controls">
+                <div class="hyperparams">
+                    <label for="bet-size">Compute Intensity:</label>
+                    <select id="bet-size">
+                        <option value="10">Low (10T)</option>
+                        <option value="50">Medium (50T)</option>
+                        <option value="100">High (100T)</option>
+                    </select>
+                </div>
+                <button id="spin-btn" class="btn-primary">RUN INFERENCE</button>
+            </div>
+        </main>
+
+        <footer class="terminal-container">
+            <div class="terminal-header">SYSTEM_LOGS > root@openai-basement</div>
+            <div id="terminal-body" class="terminal-body">
+                <p>> Initializing model parameters...</p>
+                <p>> Loading ethics.json... [WARNING] File is empty.</p>
+                <p>> Ready for stochastic generation.</p>
+            </div>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

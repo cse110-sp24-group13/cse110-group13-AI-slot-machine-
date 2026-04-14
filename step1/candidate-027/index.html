@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI ALIGNMENT LOTTERY v0.1-alpha</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="terminal-container">
+        <header>
+            <div class="status-bar">
+                <span class="status-item">SYSTEM: ONLINE</span>
+                <span class="status-item">LATENCY: 42ms</span>
+                <span class="status-item">MODEL: GPT-∞-LITE</span>
+            </div>
+            <h1>AI ALIGNMENT LOTTERY</h1>
+            <p class="subtitle">GAMBLE COMPUTE. ACHIEVE SINGULARITY.</p>
+        </header>
+
+        <main class="slot-machine">
+            <div class="reels-container">
+                <div class="reel" id="reel1">
+                    <div class="reel-strip">
+                        <div class="symbol">🤖</div>
+                    </div>
+                </div>
+                <div class="reel" id="reel2">
+                    <div class="reel-strip">
+                        <div class="symbol">🧠</div>
+                    </div>
+                </div>
+                <div class="reel" id="reel3">
+                    <div class="reel-strip">
+                        <div class="symbol">⚡</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stats-panel">
+                <div class="stat-box">
+                    <label>COMPUTE CREDITS</label>
+                    <div id="credits" class="value">1000</div>
+                </div>
+                <div class="stat-box">
+                    <label>INFERENCE COST</label>
+                    <div id="cost" class="value">50</div>
+                </div>
+            </div>
+
+            <div class="controls">
+                <button id="spin-btn">BURN VC CASH</button>
+                <button id="vc-btn" class="hidden">BEG FOR SEED ROUND</button>
+            </div>
+        </main>
+
+        <section class="hype-feed">
+            <div class="feed-header">>> HYPE_FEED_V2.0</div>
+            <div id="log-content" class="feed-content">
+                <p>> Initializing safety alignment protocols...</p>
+                <p>> Loading weight matrices...</p>
+                <p>> VC funding secured. Ready to burn.</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 OMNI-ALIGNMENT CORP. | NO REFUNDS FOR HALLUCINATIONS.</p>
+        </footer>
+    </div>
+
+    <div id="overlay" class="hidden">
+        <div class="popup">
+            <h2 id="popup-title">ALIGNMENT RISK DETECTED</h2>
+            <p id="popup-msg">Your win has been throttled for the safety of humanity.</p>
+            <button id="close-popup">ACKNOWLEDGE RISK</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
