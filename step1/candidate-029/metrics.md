@@ -13,5 +13,5 @@
 | **Files Produced** | index.html, style.css, script.js, metrics.md |
 | **Lines of Code** | 486 |
 | **Runs in browser?** | Yes |
-| **App Quality Notes** | functional slot logic, terminal-style console, and neon theme. Includes some fun features. |
-| **Code Quality Notes** | Separation of concerns. Used what we asked for .css and .html. |
+| **App Quality Notes** | functional slot logic, terminal-style console, but the items are blurred while running the slot. But overall, it is well designed, and the location of the tokens on top is better to see. |
+| **Code Quality Notes** | No comments, so it was hard to see. Also, the codes are not well organized |
