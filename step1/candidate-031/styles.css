@@ -1,0 +1,134 @@
+:root {
+    --bg-color: #0d1117;
+    --card-bg: #161b22;
+    --neon-blue: #58a6ff;
+    --neon-green: #3fb950;
+    --neon-purple: #bc8cff;
+    --text-color: #c9d1d9;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(88, 166, 255, 0.2);
+}
+
+h1 {
+    color: var(--neon-blue);
+    text-shadow: 0 0 10px var(--neon-blue);
+}
+
+.subtitle {
+    margin-bottom: 2rem;
+    opacity: 0.8;
+}
+
+.reels {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.reel {
+    background: #21262d;
+    width: 80px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    border: 3px solid var(--neon-purple);
+    border-radius: 8px;
+    transition: transform 0.1s ease-in-out;
+}
+
+.reel.spinning {
+    animation: shake 0.1s infinite alternate;
+}
+
+@keyframes shake {
+    from { transform: translateY(-5px); }
+    to { transform: translateY(5px); }
+}
+
+.controls {
+    margin-bottom: 2rem;
+}
+
+.balance-container {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+#token-balance {
+    color: var(--neon-green);
+    font-weight: bold;
+    text-shadow: 0 0 5px var(--neon-green);
+}
+
+#spin-btn {
+    background-color: var(--neon-blue);
+    color: #fff;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0 0 10px var(--neon-blue);
+}
+
+#spin-btn:hover:not(:disabled) {
+    transform: scale(1.05);
+    background-color: var(--neon-purple);
+    box-shadow: 0 0 15px var(--neon-purple);
+}
+
+#spin-btn:disabled {
+    background-color: #484f58;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.message {
+    font-size: 1.2rem;
+    height: 1.5rem;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+.legend {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #30363d;
+    text-align: left;
+}
+
+.legend h3 {
+    text-align: center;
+    color: var(--neon-purple);
+}
+
+.legend ul {
+    list-style: none;
+    padding: 0;
+}
+
+.legend li {
+    padding: 0.2rem 0;
+}
