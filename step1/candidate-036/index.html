@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Solution Generator | Startup Simulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>AI Solution Generator</h1>
+            <p class="tagline">"Monetizing the Hallucination Loop"</p>
+        </header>
+
+        <main class="slot-machine">
+            <div class="reels-container">
+                <div class="reel" id="reel-1">🤖</div>
+                <div class="reel" id="reel-2">🤖</div>
+                <div class="reel" id="reel-3">🤖</div>
+            </div>
+
+            <div class="controls">
+                <button id="spin-button">Run Inference (5 Credits)</button>
+            </div>
+
+            <div class="status-panel">
+                <div class="stat">
+                    <span class="label">Compute Credits:</span>
+                    <span id="balance" class="value">100</span>
+                </div>
+                <div class="stat">
+                    <span class="label">Startup Valuation:</span>
+                    <span id="valuation" class="value">$0</span>
+                </div>
+            </div>
+
+            <div id="message-display" class="message">Ready to disrupt...</div>
+        </main>
+
+        <section class="log-panel">
+            <h3>System Logs</h3>
+            <ul id="event-log">
+                <li>[LOG] Seed funding secured: 100 Credits</li>
+            </ul>
+        </section>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
