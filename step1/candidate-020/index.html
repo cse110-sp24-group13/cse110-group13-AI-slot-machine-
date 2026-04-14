@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Token Burner - AI Slot Machine</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>THE TOKEN BURNER</h1>
+            <p class="subtitle">Generating AI Hallucinations for Profit</p>
+        </header>
+
+        <div class="stats-board">
+            <div class="stat-box">
+                <label>COMPUTE CREDITS</label>
+                <div id="balance" class="value">1000</div>
+            </div>
+            <div class="stat-box">
+                <label>COST PER SPIN</label>
+                <div class="value">50</div>
+            </div>
+        </div>
+
+        <div class="slot-machine">
+            <div class="reel-container">
+                <div id="reel1" class="reel">
+                    <div class="reel-content">🤖</div>
+                </div>
+                <div id="reel2" class="reel">
+                    <div class="reel-content">🤖</div>
+                </div>
+                <div id="reel3" class="reel">
+                    <div class="reel-content">🤖</div>
+                </div>
+            </div>
+            
+            <div class="machine-bottom">
+                <button id="spin-button">BURN TOKENS</button>
+            </div>
+        </div>
+
+        <div class="status-log">
+            <div id="status-message">Ready to hallucinate rewards...</div>
+            <div id="console-log" class="console">
+                <p>> System initialized.</p>
+                <p>> Waiting for VC funding (click spin).</p>
+            </div>
+        </div>
+        
+        <footer>
+            <p>Disclaimer: This is not AGI. Your credits have no value. We are burning GPUs for fun.</p>
+        </footer>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
