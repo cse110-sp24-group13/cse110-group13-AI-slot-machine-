@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+
+:root {
+    --bg-color: #050505;
+    --neon-cyan: #00f3ff;
+    --neon-magenta: #ff00ff;
+    --terminal-green: #33ff33;
+    --panel-bg: #111111;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--neon-cyan);
+    font-family: 'Roboto Mono', monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.overlord-container {
+    width: 100%;
+    max-width: 600px;
+    background: var(--panel-bg);
+    border: 2px solid var(--neon-cyan);
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 243, 255, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+header {
+    text-align: center;
+}
+
+.neon-text {
+    font-size: 1.5rem;
+    color: var(--neon-cyan);
+    text-shadow: 0 0 10px var(--neon-cyan);
+    margin-bottom: 5px;
+}
+
+.status-indicator {
+    font-size: 0.8rem;
+}
+
+.terminal {
+    background: #000;
+    border: 1px solid var(--neon-magenta);
+    padding: 10px;
+    font-size: 0.75rem;
+    height: 100px;
+    overflow-y: hidden;
+    color: var(--terminal-green);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.slot-machine {
+    background: #111;
+    border: 4px solid var(--neon-cyan);
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.reels {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.reel {
+    width: 100px;
+    height: 100px;
+    background: #000;
+    border: 2px solid var(--neon-magenta);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.symbol-container {
+    transition: transform 0.1s ease-in-out;
+}
+
+/* Animations */
+@keyframes spin-blur {
+    0% { transform: translateY(-500%); opacity: 0.5; filter: blur(2px); }
+    100% { transform: translateY(500%); opacity: 0.5; filter: blur(2px); }
+}
+
+.spinning {
+    animation: spin-blur 0.15s linear infinite;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.display-panel {
+    display: flex;
+    justify-content: space-between;
+    background: #222;
+    padding: 10px;
+    border: 1px solid var(--neon-cyan);
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stat .label {
+    font-size: 0.6rem;
+    color: var(--neon-magenta);
+}
+
+.stat .value {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+}
+
+.neon-btn {
+    background: transparent;
+    border: 2px solid var(--neon-cyan);
+    color: var(--neon-cyan);
+    padding: 10px;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: bold;
+    flex: 1;
+    transition: all 0.2s ease;
+}
+
+.neon-btn:hover {
+    background: var(--neon-cyan);
+    color: #000;
+    box-shadow: 0 0 10px var(--neon-cyan);
+}
+
+.neon-btn.primary {
+    flex: 3;
+    border-color: var(--neon-magenta);
+    color: var(--neon-magenta);
+}
+
+.neon-btn.primary:hover {
+    background: var(--neon-magenta);
+    color: #000;
+    box-shadow: 0 0 10px var(--neon-magenta);
+}
+
+.neon-btn:active {
+    transform: scale(0.95);
+}
+
+.footer-stats {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.6rem;
+    border-top: 1px solid #333;
+    padding-top: 10px;
+    color: #555;
+}
+
+#efficiency {
+    color: var(--neon-magenta);
+}
