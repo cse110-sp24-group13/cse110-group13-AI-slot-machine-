@@ -1,0 +1,211 @@
+:root {
+    --bg-color: #0d0d1a;
+    --panel-color: #1a1a2e;
+    --neon-cyan: #00f2ff;
+    --neon-purple: #bc13fe;
+    --neon-pink: #ff00ea;
+    --text-color: #e0e0ff;
+    --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-main);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 600px;
+    width: 90%;
+    text-align: center;
+    padding: 2rem;
+}
+
+header h1 {
+    font-size: 3rem;
+    color: var(--neon-cyan);
+    text-shadow: 0 0 10px var(--neon-cyan), 0 0 20px var(--neon-cyan);
+    letter-spacing: 0.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.tagline {
+    font-size: 0.9rem;
+    color: var(--neon-purple);
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+/* Slot Machine Frame */
+.slot-machine {
+    background: var(--panel-color);
+    border: 4px solid var(--neon-purple);
+    box-shadow: 0 0 20px var(--neon-purple), inset 0 0 10px var(--neon-purple);
+    border-radius: 15px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.stats-bar {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+    font-weight: bold;
+    border-bottom: 1px solid rgba(188, 19, 254, 0.3);
+    padding-bottom: 1rem;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+}
+
+.label {
+    font-size: 0.7rem;
+    color: var(--neon-cyan);
+}
+
+#credit-count, #last-win {
+    font-size: 1.5rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* Reels Container */
+.reels-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    position: relative;
+    background: #000;
+    padding: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 150px; /* Container height */
+}
+
+.reel {
+    width: 100px;
+    height: 110px; /* Match symbol height for single visible symbol centering */
+    background: #111;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    align-self: center;
+}
+
+.reel-strip {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    transition: transform 2s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+}
+
+.symbol {
+    height: 110px; /* Fixed height for script logic */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    flex-shrink: 0;
+}
+
+.win-line {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--neon-pink);
+    box-shadow: 0 0 10px var(--neon-pink);
+    transform: translateY(-50%);
+    pointer-events: none;
+    z-index: 10;
+    opacity: 0.5;
+}
+
+/* Controls */
+.controls {
+    margin-top: 2rem;
+}
+
+#spin-button {
+    background: transparent;
+    border: 2px solid var(--neon-cyan);
+    color: var(--neon-cyan);
+    padding: 1rem 3rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px var(--neon-cyan);
+    margin-bottom: 1rem;
+}
+
+#spin-button:hover:not(:disabled) {
+    background: var(--neon-cyan);
+    color: var(--bg-color);
+    box-shadow: 0 0 20px var(--neon-cyan);
+}
+
+#spin-button:disabled {
+    border-color: #444;
+    color: #444;
+    box-shadow: none;
+    cursor: not-allowed;
+}
+
+.status-box {
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#status-message {
+    font-size: 0.9rem;
+    color: var(--neon-pink);
+    font-style: italic;
+}
+
+/* Payout Table */
+.payout-table {
+    background: rgba(26, 26, 46, 0.8);
+    padding: 1rem;
+    border-radius: 10px;
+    font-size: 0.8rem;
+}
+
+.payout-table h3 {
+    color: var(--neon-cyan);
+    margin-bottom: 0.5rem;
+}
+
+.payout-table ul {
+    list-style: none;
+}
+
+.payout-table li {
+    margin: 0.3rem 0;
+}
+
+footer {
+    margin-top: 2rem;
+    font-size: 0.7rem;
+    opacity: 0.5;
+}
