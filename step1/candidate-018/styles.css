@@ -1,0 +1,177 @@
+:root {
+    --bg-color: #0d0221;
+    --card-bg: #1a0b2e;
+    --accent-color: #00f2ff;
+    --neon-pink: #ff00ff;
+    --neon-green: #39ff14;
+    --text-color: #e0e0e0;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.game-container {
+    width: 90%;
+    max-width: 500px;
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 242, 255, 0.2), inset 0 0 10px rgba(255, 0, 255, 0.1);
+    border: 1px solid var(--accent-color);
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2rem;
+    text-shadow: 0 0 10px var(--accent-color);
+    margin-bottom: 1.5rem;
+}
+
+.stats-bar {
+    display: flex;
+    justify-content: space-around;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 0.5rem;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+    border: 1px solid rgba(0, 242, 255, 0.3);
+}
+
+.stat-item .value {
+    color: var(--neon-green);
+    font-weight: bold;
+}
+
+.slot-machine {
+    background: #000;
+    padding: 1.5rem;
+    border-radius: 10px;
+    border: 2px solid var(--neon-pink);
+    margin-bottom: 1.5rem;
+}
+
+.reels {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.reel {
+    width: 100px;
+    height: 100px;
+    background: #111;
+    border: 2px solid #333;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.reel.spinning {
+    animation: blur-spin 0.1s infinite;
+}
+
+@keyframes blur-spin {
+    0% { transform: translateY(0); filter: blur(0); }
+    50% { transform: translateY(-10px); filter: blur(5px); }
+    100% { transform: translateY(10px); filter: blur(5px); }
+}
+
+.main-btn {
+    background: transparent;
+    border: 2px solid var(--neon-green);
+    color: var(--neon-green);
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-transform: uppercase;
+    box-shadow: 0 0 10px var(--neon-green);
+}
+
+.main-btn:hover:not(:disabled) {
+    background: var(--neon-green);
+    color: #000;
+    box-shadow: 0 0 20px var(--neon-green);
+}
+
+.main-btn:disabled {
+    border-color: #666;
+    color: #666;
+    box-shadow: none;
+    cursor: not-allowed;
+}
+
+.cost-info {
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    color: #888;
+}
+
+.console-output {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000;
+    border: 1px solid #444;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--accent-color);
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.overlay.hidden {
+    display: none;
+}
+
+.overlay-content {
+    background: var(--card-bg);
+    padding: 3rem;
+    border: 3px solid var(--neon-pink);
+    border-radius: 20px;
+    box-shadow: 0 0 50px var(--neon-pink);
+    text-align: center;
+}
+
+.overlay-content h2 {
+    color: var(--neon-pink);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.overlay-content button {
+    margin-top: 2rem;
+    padding: 0.8rem 1.5rem;
+    background: var(--neon-pink);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+}

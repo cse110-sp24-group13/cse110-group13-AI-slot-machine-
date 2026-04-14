@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Hype-O-Matic Slot Machine</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <header>
+            <h1>AI HYPE-O-MATIC</h1>
+            <div class="stats-bar">
+                <div class="stat-item">
+                    <span class="label">Compute Credits:</span>
+                    <span id="credit-count" class="value">100</span>
+                </div>
+                <div class="stat-item">
+                    <span class="label">Model Weights:</span>
+                    <span id="weight-count" class="value">0</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="slot-machine">
+            <div class="reels">
+                <div class="reel" id="reel-1">
+                    <div class="symbol">🤖</div>
+                </div>
+                <div class="reel" id="reel-2">
+                    <div class="symbol">⚡</div>
+                </div>
+                <div class="reel" id="reel-3">
+                    <div class="symbol">🧠</div>
+                </div>
+            </div>
+            
+            <div class="controls">
+                <button id="spin-btn" class="main-btn">INFERENCE (Spin)</button>
+                <div class="cost-info">Cost: 10 Credits</div>
+            </div>
+        </div>
+
+        <div class="console-output">
+            <div id="status-message" class="message">Ready to optimize...</div>
+        </div>
+
+        <div id="win-overlay" class="overlay hidden">
+            <div class="overlay-content">
+                <h2 id="win-title">FUNDING SECURED!</h2>
+                <p id="win-amount">+50 Credits</p>
+                <button id="close-overlay">CONTINUE PIVOTING</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
