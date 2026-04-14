@@ -17,7 +17,7 @@
 ## Output
 - **Files Produced (count): 4** 
 - **Files Produced (names): index.html, script.js, style.css, README.md** 
-- **Lines of Code: 448 ** 
+- **Lines of Code: 451 ** 
 - **Runs in Browser: Yes** 
 
 ## Quality Notes
