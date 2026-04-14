@@ -2,7 +2,7 @@
 |-------|-------|
 | Run ID | candidate-028 |
 | Timestamp | 2026-04-13 15:45:12 |
-| Model+version string | Gemini 2.0 Flash |
+| Model+version string | Gemini 3.0 Flash |
 | Input tokens | 111,549 |
 | Output tokens | 10,304 |
 | Total tokens | 316,582 |
