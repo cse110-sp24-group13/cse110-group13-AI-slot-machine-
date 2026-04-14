@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI HYPE FARM - TOKEN REFINERY</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI HYPE FARM</h1>
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="label">TOKEN CREDITS</span>
+                    <span id="token-count" class="value">1000</span>
+                </div>
+                <div class="stat-item">
+                    <span class="label">ENERGY (Wh)</span>
+                    <span id="energy-count" class="value">500</span>
+                </div>
+            </div>
+        </header>
+
+        <main class="slot-machine">
+            <div class="reels">
+                <div class="reel" id="reel1">
+                    <div class="reel-strip"></div>
+                </div>
+                <div class="reel" id="reel2">
+                    <div class="reel-strip"></div>
+                </div>
+                <div class="reel" id="reel3">
+                    <div class="reel-strip"></div>
+                </div>
+            </div>
+
+            <div class="controls">
+                <div class="bet-control">
+                    <label for="parameter-count">Parameter Count (Bet):</label>
+                    <input type="number" id="parameter-count" value="10" min="1" max="100">
+                </div>
+                <button id="generate-btn">GENERATE</button>
+            </div>
+
+            <div class="terminal">
+                <div class="terminal-header">SYSTEM LOG</div>
+                <div id="log-content" class="log-content">Initializing Hype Matrix...</div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 AI Hype Corp. "We make things up so you don't have to."</p>
+        </footer>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

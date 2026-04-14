@@ -1,0 +1,182 @@
+:root {
+    --bg-color: #0b0f13;
+    --neon-green: #00ff41;
+    --neon-cyan: #00f3ff;
+    --neon-red: #ff3131;
+    --dark-grey: #1c1f26;
+    --font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--neon-green);
+    font-family: var(--font-family);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 600px;
+    width: 100%;
+    padding: 20px;
+    border: 2px solid var(--neon-green);
+    box-shadow: 0 0 15px var(--neon-green);
+    background-color: var(--dark-grey);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--neon-green);
+    padding-bottom: 10px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    text-shadow: 0 0 10px var(--neon-green);
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.label {
+    font-size: 0.8rem;
+    color: var(--neon-cyan);
+}
+
+.value {
+    font-size: 1.5rem;
+}
+
+.slot-machine {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.reels {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    background-color: #000;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid var(--neon-cyan);
+    overflow: hidden;
+}
+
+.reel {
+    width: 100px;
+    height: 150px;
+    border: 1px solid var(--neon-green);
+    background: #111;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.reel-strip {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 3s cubic-bezier(0.1, 0.7, 0.1, 1);
+}
+
+.reel-item {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    text-shadow: 0 0 5px var(--neon-green);
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.bet-control {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+input[type="number"] {
+    background: transparent;
+    border: 1px solid var(--neon-green);
+    color: var(--neon-green);
+    padding: 5px;
+    width: 60px;
+}
+
+#generate-btn {
+    background: var(--neon-green);
+    color: #000;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 10px var(--neon-green);
+    transition: transform 0.1s, box-shadow 0.1s;
+}
+
+#generate-btn:hover {
+    box-shadow: 0 0 20px var(--neon-green);
+}
+
+#generate-btn:active {
+    transform: scale(0.95);
+}
+
+.terminal {
+    background: #000;
+    border: 1px solid var(--neon-cyan);
+    height: 100px;
+    padding: 10px;
+    overflow-y: auto;
+    font-size: 0.9rem;
+}
+
+.terminal-header {
+    font-weight: bold;
+    color: var(--neon-cyan);
+    border-bottom: 1px solid var(--neon-cyan);
+    margin-bottom: 5px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.7rem;
+    opacity: 0.7;
+}
+
+@keyframes spin {
+    from { transform: translateY(0); }
+    to { transform: translateY(-100%); }
+}
+
+.spinning {
+    animation: spin 0.2s linear infinite;
+}
