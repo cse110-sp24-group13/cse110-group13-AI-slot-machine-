@@ -1,0 +1,237 @@
+:root {
+    --bg-color: #0d0d0d;
+    --panel-bg: #1a1a1a;
+    --neon-green: #00ff41;
+    --neon-purple: #9d00ff;
+    --neon-blue: #00f3ff;
+    --neon-gold: #ffcf00;
+    --text-main: #e0e0e0;
+    --accent: var(--neon-green);
+    --shadow: 0 0 15px var(--accent);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transition: background 1s ease;
+}
+
+body.theme-ai {
+    --accent: var(--neon-green);
+}
+
+body.theme-web3 {
+    --bg-color: #050510;
+    --panel-bg: #101030;
+    --accent: var(--neon-gold);
+    color: var(--neon-blue);
+}
+
+#game-container {
+    width: 95%;
+    max-width: 600px;
+    background: var(--panel-bg);
+    padding: 2rem;
+    border: 2px solid var(--accent);
+    box-shadow: var(--shadow);
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+header h1 {
+    font-size: 2rem;
+    color: var(--accent);
+    text-shadow: var(--shadow);
+    margin: 0;
+}
+
+.v2 {
+    font-size: 0.8rem;
+    vertical-align: super;
+}
+
+.subtitle {
+    font-size: 0.9rem;
+    font-style: italic;
+    opacity: 0.7;
+    margin-bottom: 2rem;
+}
+
+#stats-panel {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.stat {
+    background: #000;
+    padding: 0.5rem;
+    border: 1px solid #333;
+    border-radius: 4px;
+}
+
+.stat-label {
+    display: block;
+    font-size: 0.65rem;
+    color: var(--accent);
+    margin-bottom: 0.2rem;
+}
+
+.stat span:not(.stat-label) {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+#reels-window {
+    display: flex;
+    justify-content: space-around;
+    background: #000;
+    padding: 1rem;
+    border: 2px solid #333;
+    border-radius: 8px;
+    height: 120px;
+    position: relative;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+}
+
+.reel {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    background: #111;
+    border-radius: 4px;
+}
+
+#payline {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: rgba(255, 0, 0, 0.4);
+    box-shadow: 0 0 10px red;
+    transform: translateY(-50%);
+    pointer-events: none;
+    z-index: 5;
+}
+
+#action-area {
+    margin-bottom: 2rem;
+}
+
+#spin-btn {
+    width: 100%;
+    padding: 1rem;
+    background: transparent;
+    border: 2px solid var(--accent);
+    color: var(--accent);
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+    transition: all 0.2s;
+}
+
+#spin-btn:hover:not(:disabled) {
+    background: var(--accent);
+    color: #000;
+}
+
+#spin-btn:active:not(:disabled) {
+    transform: scale(0.98);
+}
+
+#spin-btn:disabled {
+    border-color: #444;
+    color: #444;
+    box-shadow: none;
+    cursor: not-allowed;
+}
+
+#status-log {
+    background: #000;
+    border: 1px solid #333;
+    padding: 1rem;
+    text-align: left;
+    height: 80px;
+    font-size: 0.85rem;
+    overflow-y: auto;
+}
+
+.log-title {
+    color: var(--accent);
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+}
+
+#pivot-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    transition: opacity 0.5s;
+}
+
+#pivot-overlay.hidden {
+    display: none;
+    opacity: 0;
+}
+
+.overlay-content {
+    max-width: 80%;
+    padding: 2rem;
+    border: 2px solid var(--neon-gold);
+    background: #101030;
+    color: var(--neon-gold);
+    box-shadow: 0 0 30px var(--neon-gold);
+}
+
+#pivot-btn {
+    margin-top: 1.5rem;
+    padding: 1rem 2rem;
+    background: var(--neon-gold);
+    color: #000;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+footer {
+    margin-top: 1.5rem;
+    font-size: 0.7rem;
+    opacity: 0.5;
+}
+
+/* Spin animation */
+@keyframes reel-spin {
+    0% { transform: translateY(0); filter: blur(0); }
+    50% { transform: translateY(-20px); filter: blur(4px); }
+    100% { transform: translateY(20px); filter: blur(0); }
+}
+
+.spinning {
+    animation: reel-spin 0.15s linear infinite;
+}
