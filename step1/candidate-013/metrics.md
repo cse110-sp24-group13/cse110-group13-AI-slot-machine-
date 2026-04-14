@@ -22,7 +22,10 @@
 
 ## Quality Notes
 - **App Quality Notes:**
-
+  - Strongest AI satire of the candidates
+  - adjustable bet sizes via button group, scrolling terminal log, two-of-a-kind partial payouts, and a punitive token burn on triple hallucination 
 
 - **Code Quality Notes:**
+  - This candidate produced a README.md unprompted, shows the model applied extra context about the project
+  - Reel animation logic is the most reliable of the three
 
