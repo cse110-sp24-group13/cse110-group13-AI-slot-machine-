@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarcastic AI Slot Machine</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="scanlines"></div>
+    <div id="terminal">
+        <header>
+            <div class="status-bar">
+                <span>MODEL: GPT-∞_SATIRE_v0.1</span>
+                <span>STATUS: <span id="model-status">READY TO HALLUCINATE</span></span>
+                <span>TOKENS: <span id="token-count">1000</span></span>
+            </div>
+        </header>
+        <main>
+            <div id="reels">
+                <div class="reel" id="reel1">?</div>
+                <div class="reel" id="reel2">?</div>
+                <div class="reel" id="reel3">?</div>
+            </div>
+            <div id="terminal-logs">
+                <p>> System initialized. Waiting for prompt engineering...</p>
+            </div>
+        </main>
+        <footer>
+            <div class="input-area">
+                <span class="prompt-char">></span>
+                <input type="text" id="prompt-input" placeholder="Enter prompt to 'optimize' results..." autofocus>
+                <button id="generate-btn">GENERATE</button>
+            </div>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
