@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stochastic Parrots Casino - AI Slot Machine</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-mode">
+    <div class="container">
+        <header>
+            <div class="header-top">
+                <h1>STOCHASTIC PARROTS CASINO</h1>
+                <button id="theme-toggle" class="icon-btn" aria-label="Toggle Dark/Light Mode">🌓</button>
+            </div>
+            <p class="subtitle">Predicting the next token with 0% certainty!</p>
+        </header>
+
+        <section class="stats-panel">
+            <div class="stat-box">
+                <label>COMPUTE CREDITS</label>
+                <div id="credits">1000</div>
+            </div>
+            <div class="stat-box">
+                <label>CURRENT BET</label>
+                <div id="current-bet">50</div>
+            </div>
+            <div class="stat-box">
+                <label>WIN STREAK</label>
+                <div id="win-streak">0</div>
+            </div>
+            <div class="stat-box">
+                <label>SESSION RTP</label>
+                <div id="rtp">0%</div>
+            </div>
+        </section>
+
+        <main class="slot-machine">
+            <div class="reels">
+                <div class="reel" id="reel1">
+                    <div class="reel-container"></div>
+                </div>
+                <div class="reel" id="reel2">
+                    <div class="reel-container"></div>
+                </div>
+                <div class="reel" id="reel3">
+                    <div class="reel-container"></div>
+                </div>
+            </div>
+            
+            <div class="status-box">
+                <div id="status">Awaiting Prompt...</div>
+            </div>
+
+            <div class="controls">
+                <div class="bet-controls">
+                    <button id="bet-minus" class="control-btn">-</button>
+                    <span class="label">ADJUST BET</span>
+                    <button id="bet-plus" class="control-btn">+</button>
+                </div>
+                <button id="spin-btn">GENERATE RESPONSE</button>
+                <div class="autoplay-controls">
+                    <button id="autoplay-btn" class="toggle-btn">AUTOPLAY: OFF</button>
+                </div>
+            </div>
+        </main>
+
+        <section class="dashboard">
+            <div class="info">
+                <h3>PAYOUT ALIGNMENT</h3>
+                <ul id="payout-list"></ul>
+            </div>
+            <div class="history">
+                <h3>LOGS</h3>
+                <ul id="history-log"></ul>
+            </div>
+        </section>
+        
+        <footer>
+            <p>Keyboard Controls: [SPACE] Spin | [UP/DOWN] Bet | [A] Autoplay</p>
+        </footer>
+    </div>
+    <script type="module" src="app.js"></script>
+</body>
+</html>
