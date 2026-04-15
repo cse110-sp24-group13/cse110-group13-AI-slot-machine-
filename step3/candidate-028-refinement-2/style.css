@@ -1,0 +1,248 @@
+:root {
+    --bg-color: #0d1117;
+    --card-bg: #161b22;
+    --accent-color: #58a6ff;
+    --text-color: #c9d1d9;
+    --win-color: #3fb950;
+    --lose-color: #f85149;
+    --warning-color: #d29922;
+    --font-mono: 'Courier New', Courier, monospace;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    border: 1px solid #30363d;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.accent {
+    color: var(--accent-color);
+}
+
+.metrics {
+    display: flex;
+    justify-content: space-around;
+    background: #0d1117;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid #30363d;
+}
+
+.metric {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 45%;
+}
+
+.metric label {
+    font-size: 0.7rem;
+    color: #8b949e;
+    text-transform: uppercase;
+    margin-bottom: 0.3rem;
+}
+
+#token-balance {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--win-color);
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: #21262d;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+#context-progress {
+    height: 100%;
+    background: var(--accent-color);
+    transition: width 0.3s ease;
+}
+
+/* Slot Machine */
+.slot-machine {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    background: #0d1117;
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 2px solid #30363d;
+    position: relative;
+    overflow: hidden;
+}
+
+.reel {
+    width: 100px;
+    height: 120px;
+    background: #161b22;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #30363d;
+}
+
+.reel-container {
+    display: flex;
+    flex-direction: column;
+    transition: transform 1s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+}
+
+.symbol {
+    font-size: 3rem;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+
+.win-line {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: rgba(88, 166, 255, 0.3);
+    pointer-events: none;
+}
+
+/* Controls */
+.controls {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.control-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.control-group label {
+    font-size: 0.9rem;
+    color: #8b949e;
+}
+
+input[type="range"] {
+    width: 100%;
+    cursor: pointer;
+}
+
+button {
+    background: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.1s active, opacity 0.2s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Console */
+.console {
+    margin-top: 2rem;
+    background: #0d1117;
+    border-radius: 8px;
+    border: 1px solid #30363d;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+}
+
+.console-header {
+    background: #161b22;
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid #30363d;
+    color: #8b949e;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+}
+
+.console-logs {
+    padding: 0.5rem 1rem;
+    overflow-y: auto;
+    flex-grow: 1;
+}
+
+.log-entry {
+    margin-bottom: 0.3rem;
+    line-height: 1.2;
+}
+
+.log-entry.system {
+    color: var(--accent-color);
+}
+
+.log-entry.win {
+    color: var(--win-color);
+}
+
+.log-entry.lose {
+    color: var(--lose-color);
+}
+
+.log-entry.warn {
+    color: var(--warning-color);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-thumb {
+    background: #30363d;
+    border-radius: 3px;
+}
