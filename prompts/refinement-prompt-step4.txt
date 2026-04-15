@@ -1,12 +1,14 @@
 
-Finalize the slot machine web app into a highly polished, demo-ready product using only vanilla HTML, CSS, and JavaScript. Ensure all features are complete, cohesive, and feel intentional.
+Finalize the slot machine web app into a highly polished, demo-ready product using only vanilla HTML, CSS, and JavaScript. Preserve and build on the existing architecture and any working features.
 
-Optimize the gameplay experience: reels should spin smoothly with satisfying timing, outcomes should feel fair and consistent, and win/loss feedback should be immediate and clear. Fine-tune randomness and “temperature” so its effect is noticeable but not chaotic.
+Fix any payout logic inconsistencies: ensure outcomes match what the paytable displays and that every spin result feels explainable to the player. Losing combinations should never yield positive rewards.
 
-Add persistence using browser APIs (e.g., localStorage) to save token balance and settings across sessions. Include a reset option.
+Add persistence via localStorage to save token balance, temperature setting, and game state across sessions. Include a clear reset option.
 
-Enhance usability and accessibility: keyboard support, proper labels, ARIA where appropriate, and clear visual hierarchy. Ensure responsive design works well on different screen sizes.
+Polish the gameplay loop: refine spin timing and easing for satisfying reel animations, add streak tracking with milestone feedback, and ensure the temperature slider's effect on outcomes is noticeable but balanced. All interactive elements should feel seamless and responsive.
 
-Polish the AI satire: system logs should feel dynamic, varied, and context-aware. Add subtle personality without being repetitive.
+Enhance accessibility: add ARIA labels, keyboard navigation, and ensure responsive layout across screen sizes.
 
-Clean and optimize code: remove redundancy, organize logic into reusable functions, and ensure maintainability. The final product should feel smooth, intentional, and ready to showcase.
+Sharpen the AI satire: system logs should vary based on context — streaks, near-misses, temperature extremes, and big wins should each trigger distinct, witty responses without repetition.
+
+Clean up any dead code or unused references. The final product should feel smooth, intentional, and showcase-ready.

@@ -4,6 +4,7 @@ export class StateManager {
     constructor() {
         this.credits = CONFIG.INITIAL_CREDITS;
         this.currentBet = CONFIG.DEFAULT_BET;
+        this.temperature = CONFIG.DEFAULT_TEMPERATURE;
         this.winStreak = 0;
         this.totalSpins = 0;
         this.totalBet = 0;
@@ -25,6 +26,11 @@ export class StateManager {
     updateCredits(amount) {
         this.credits += amount;
         if (amount > 0) this.totalWon += amount;
+        this.notify();
+    }
+
+    setTemperature(value) {
+        this.temperature = parseFloat(value);
         this.notify();
     }
 
@@ -58,6 +64,11 @@ export class StateManager {
 
     toggleAutoplay() {
         this.isAutoplay = !this.isAutoplay;
+        this.notify();
+    }
+
+    clearHistory() {
+        this.history = [];
         this.notify();
     }
 

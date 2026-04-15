@@ -1,6 +1,6 @@
+import { CONFIG, SYMBOLS, MESSAGES } from './js/config.js';
 import { StateManager } from './js/state.js';
 import { Engine } from './js/engine.js';
-import { DifficultyManager } from './js/difficulty.js';
 import { UIManager } from './js/ui.js';
 import { InputHandler } from './js/input.js';
 import { AudioManager } from './js/audio.js';
@@ -9,8 +9,7 @@ class App {
     constructor() {
         this.state = new StateManager();
         this.engine = new Engine();
-        this.difficulty = new DifficultyManager(this.engine);
-        this.ui = new UIManager(this.state);
+        this.ui = new UIManager(this.state, this.engine);
         this.audio = new AudioManager();
         this.input = new InputHandler({
             onSpin: () => this.handleSpin(),
@@ -23,7 +22,7 @@ class App {
         
         // Initial reel setup
         this.ui.reelContainers.forEach(reel => {
-            const symbol = this.engine.getRandomSymbol();
+            const symbol = this.engine.getRandomSymbol(this.state.temperature);
             reel.innerHTML = `<div class="symbol">${symbol.icon}</div>`;
         });
 
@@ -35,8 +34,8 @@ class App {
         
         const bet = this.state.currentBet;
         if (!this.state.placeBet()) {
-            this.ui.setStatus("Insufficient credits!", "var(--secondary)");
-            this.state.isAutoplay = false; // Stop autoplay if out of credits
+            this.ui.setStatus("Insufficient Compute Credits! Please upgrade your plan.", "var(--secondary)");
+            this.state.isAutoplay = false;
             return;
         }
 
@@ -44,10 +43,16 @@ class App {
         this.ui.setSpinning(true);
         this.audio.playSpin();
 
+        // System log satire
+        if (Math.random() < 0.2) {
+            const sysMsg = MESSAGES.SYSTEM[Math.floor(Math.random() * MESSAGES.SYSTEM.length)];
+            this.state.addHistory({ bet: 0, payout: 0, type: 'system', message: sysMsg });
+        }
+
         const results = [
-            this.engine.getRandomSymbol(),
-            this.engine.getRandomSymbol(),
-            this.engine.getRandomSymbol()
+            this.engine.getRandomSymbol(this.state.temperature),
+            this.engine.getRandomSymbol(this.state.temperature),
+            this.engine.getRandomSymbol(this.state.temperature)
         ];
 
         // Animate reels
@@ -59,14 +64,15 @@ class App {
         this.ui.setSpinning(false);
 
         this.processOutcome(outcome, bet);
-        this.difficulty.adjust(this.state.getRTP());
     }
 
     processOutcome(outcome, bet) {
         if (outcome.payout > 0) {
             this.state.updateCredits(outcome.payout);
             this.state.setWinStreak(true);
-            this.ui.setStatus(`WIN: ${outcome.symbol.message} (+${outcome.payout})`, "var(--primary)");
+            
+            const winMsg = MESSAGES.WIN[Math.floor(Math.random() * MESSAGES.WIN.length)];
+            this.ui.setStatus(`${winMsg} (+${outcome.payout})`, "var(--primary)");
             
             if (outcome.type === 'jackpot') {
                 this.audio.playJackpot();
@@ -77,14 +83,16 @@ class App {
             }
         } else {
             this.state.setWinStreak(false);
-            this.ui.setStatus("Hallucination encountered. No payout.", "var(--secondary)");
+            const lossMsg = MESSAGES.LOSS[Math.floor(Math.random() * MESSAGES.LOSS.length)];
+            this.ui.setStatus(lossMsg, "var(--secondary)");
             this.audio.playLoss();
         }
 
         this.state.addHistory({
             bet,
             payout: outcome.payout,
-            type: outcome.type
+            type: outcome.type,
+            message: outcome.payout > 0 ? outcome.symbol.message : "Inference failed."
         });
     }
 

@@ -1,8 +1,9 @@
 import { CONFIG, SYMBOLS, MESSAGES } from './config.js';
 
 export class UIManager {
-    constructor(state) {
+    constructor(state, engine) {
         this.state = state;
+        this.engine = engine;
         this.reelContainers = [
             document.querySelector('#reel1 .reel-container'),
             document.querySelector('#reel2 .reel-container'),
@@ -17,23 +18,37 @@ export class UIManager {
         this.payoutList = document.getElementById('payout-list');
         this.historyLog = document.getElementById('history-log');
         this.autoplayBtn = document.getElementById('autoplay-btn');
+        this.clearLogsBtn = document.getElementById('history-clear');
         this.themeToggle = document.getElementById('theme-toggle');
+        this.tempSlider = document.getElementById('temp-slider');
+        this.tempValue = document.getElementById('temp-value');
 
         this.init();
     }
 
     init() {
-        this.renderPayoutTable();
         this.themeToggle.addEventListener('click', () => this.toggleTheme());
+        this.clearLogsBtn.addEventListener('click', () => this.state.clearHistory());
+        this.tempSlider.addEventListener('input', (e) => {
+            this.state.setTemperature(e.target.value);
+        });
         this.state.subscribe(s => this.update(s));
     }
 
-    renderPayoutTable() {
+    renderPayoutTable(temperature) {
+        const probabilities = this.engine.getProbabilities(temperature);
+
         this.payoutList.innerHTML = '';
         SYMBOLS.forEach(s => {
+            const probability = probabilities[s.id];
+            
             const li = document.createElement('li');
             li.className = 'payout-item';
-            li.innerHTML = `<span>${s.icon} ${s.name}</span> <span>${s.value}x</span>`;
+            li.innerHTML = `
+                <span>${s.icon} ${s.name}</span> 
+                <span>${s.value}x</span>
+                <span class="odds-value">${probability}%</span>
+            `;
             this.payoutList.appendChild(li);
         });
     }
@@ -41,22 +56,33 @@ export class UIManager {
     update(state) {
         this.creditsDisplay.textContent = Math.floor(state.credits);
         this.betDisplay.textContent = state.currentBet;
-        this.streakDisplay.textContent = state.winStreak;
         this.rtpDisplay.textContent = `${state.getRTP().toFixed(1)}%`;
+        this.tempValue.textContent = state.temperature.toFixed(1);
+        this.tempSlider.value = state.temperature;
         
         this.autoplayBtn.textContent = `AUTOPLAY: ${state.isAutoplay ? 'ON' : 'OFF'}`;
         this.autoplayBtn.classList.toggle('active', state.isAutoplay);
         
+        this.renderPayoutTable(state.temperature);
         this.renderHistory(state.history);
     }
 
     renderHistory(history) {
         this.historyLog.innerHTML = '';
-        history.slice(0, 10).forEach(item => {
+        history.slice(0, 15).forEach(item => {
             const li = document.createElement('li');
             li.className = 'history-item';
-            const winClass = item.payout > 0 ? 'win' : 'loss';
-            li.innerHTML = `[${item.timestamp}] Bet: ${item.bet} | <span class="${winClass}">Payout: ${item.payout}</span>`;
+            
+            if (item.type === 'system') {
+                li.innerHTML = `<span style="color: var(--secondary)">[SYSTEM] ${item.message}</span>`;
+            } else {
+                const winClass = item.payout > 0 ? 'win' : 'loss';
+                const sign = item.payout > 0 ? '+' : '';
+                li.innerHTML = `
+                    <div class="log-top">[${item.timestamp}] Bet: ${item.bet} | <span class="${winClass}">Payout: ${sign}${item.payout}</span></div>
+                    <div class="log-msg">${item.message || ''}</div>
+                `;
+            }
             this.historyLog.appendChild(li);
         });
     }

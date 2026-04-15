@@ -2,22 +2,59 @@ import { CONFIG, SYMBOLS } from './config.js';
 
 export class Engine {
     constructor() {
-        this.symbolPool = this.generateWeightedPool();
+        this.cachedPool = null;
+        this.cachedTemp = null;
+        this.generateWeightedPool(0.7);
     }
 
-    generateWeightedPool() {
+    generateWeightedPool(temperature = 0.7) {
+        // Round to 1 decimal place to prevent floating point cache misses
+        const temp = Math.round(temperature * 10) / 10;
+        
+        if (this.cachedPool && this.cachedTemp === temp) {
+            return this.cachedPool;
+        }
+
         const pool = [];
         SYMBOLS.forEach(symbol => {
-            for (let i = 0; i < symbol.weight; i++) {
+            let weight = symbol.weight;
+            
+            // Adjust weights based on temperature
+            if (temp > 1.0) {
+                if (['mush', 'hype', 'safety', 'agi'].includes(symbol.id)) weight *= (temp * 1.5);
+                else weight /= (temp * 0.8);
+            } else if (temp < 0.5) {
+                if (['bot', 'data', 'brain'].includes(symbol.id)) weight *= (1.5 / temp);
+                else weight *= temp;
+            }
+
+            for (let i = 0; i < Math.max(1, Math.round(weight)); i++) {
                 pool.push(symbol);
             }
         });
+
+        this.cachedPool = pool;
+        this.cachedTemp = temp;
         return pool;
     }
 
-    getRandomSymbol() {
-        const index = Math.floor(Math.random() * this.symbolPool.length);
-        return this.symbolPool[index];
+    getProbabilities(temperature = 0.7) {
+        const pool = this.generateWeightedPool(temperature);
+        const total = pool.length;
+        const weights = {};
+        pool.forEach(s => weights[s.id] = (weights[s.id] || 0) + 1);
+        
+        const probs = {};
+        SYMBOLS.forEach(s => {
+            probs[s.id] = ((weights[s.id] || 0) / total * 100).toFixed(1);
+        });
+        return probs;
+    }
+
+    getRandomSymbol(temperature = 0.7) {
+        const pool = this.generateWeightedPool(temperature);
+        const index = Math.floor(Math.random() * pool.length);
+        return pool[index];
     }
 
     generateReel() {
