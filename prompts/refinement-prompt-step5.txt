@@ -1,0 +1,1 @@
+Go through this folder and search for any unclear, unused code and clean for production. Make sure everything works smoothly and clean out all bugs. Make sure everything is perfect.
