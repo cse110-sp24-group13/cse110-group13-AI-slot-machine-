@@ -1,0 +1,145 @@
+:root {
+    --bg-color: #0d1117;
+    --card-bg: #161b22;
+    --accent-color: #58a6ff;
+    --text-color: #c9d1d9;
+    --win-color: #3fb950;
+    --loss-color: #f85149;
+    --terminal-font: 'Courier New', Courier, monospace;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--terminal-font);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+#game-container {
+    width: 90%;
+    max-width: 600px;
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border: 1px solid #30363d;
+    text-align: center;
+}
+
+header h1 {
+    color: var(--accent-color);
+    margin: 0;
+}
+
+.subtitle {
+    font-size: 0.8rem;
+    font-style: italic;
+    color: #8b949e;
+}
+
+#stats-panel {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: #010409;
+    border-radius: 8px;
+}
+
+.label {
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+.value {
+    font-size: 1.2rem;
+}
+
+#slot-machine {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 2rem 0;
+}
+
+.reel-container {
+    width: 80px;
+    height: 80px;
+    background-color: #010409;
+    border: 3px solid #30363d;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.reel {
+    transition: transform 0.1s ease-in-out;
+}
+
+.reel.spinning {
+    animation: blur 0.1s infinite;
+}
+
+@keyframes blur {
+    0% { filter: blur(0px); }
+    50% { filter: blur(5px); transform: translateY(-10px); }
+    100% { filter: blur(0px); }
+}
+
+#controls {
+    margin: 2rem 0;
+}
+
+button {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-family: var(--terminal-font);
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background 0.2s, transform 0.1s;
+}
+
+button:hover {
+    background-color: #1f6feb;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+button:disabled {
+    background-color: #30363d;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+#console-output {
+    height: 100px;
+    background: #010409;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    padding: 0.5rem;
+    text-align: left;
+    overflow-y: auto;
+    font-size: 0.8rem;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.console-line {
+    margin-bottom: 2px;
+}
+
+.win-text { color: var(--win-color); font-weight: bold; }
+.loss-text { color: var(--loss-color); font-weight: bold; }
