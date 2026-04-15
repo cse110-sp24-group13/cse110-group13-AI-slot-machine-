@@ -12,6 +12,6 @@
 | **Tool-reported time(s)** | 2m 7s (60.9%) |
 | **Files Produced** | index.html, style.css, script.js |
 | **Lines of Code** | 436 |
-| **Runs in browser?** | YES|
+| **Runs in browser?** | Yes|
 | **App Quality Notes** | It is a high-quality futuristic aesthetic AI gambling app that produces random emojis, and allows you to change the total betting worth. |
 | **Code Quality Notes** | Clean vanilla JS; state-driven UI; CSS variables used for theme swapping; clear separation of concerns. |
