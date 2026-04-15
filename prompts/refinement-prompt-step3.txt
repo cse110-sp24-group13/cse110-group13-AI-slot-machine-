@@ -1,4 +1,9 @@
-Create a polished, browser-based parody of AI inference as a slot machine using only HTML, CSS, and JavaScript. The experience should feel instantly understandable: users spend tokens to run the “model,” spin three reels, and receive outcomes that clearly explain whether the model converged, hallucinated, collapsed, or paid out.
-Each spin must have readable stakes, visible odds-inspired feedback, and immediate balance updates for both token budget and context window. Temperature should not be cosmetic; it should noticeably change volatility, making higher settings produce riskier, less stable results. Include a live system console that turns every result into a funny but readable AI status report.
-Make the app feel alive with smooth reel motion, satisfying button states, strong result screens, and responsive layout. Use satire to reinforce the mechanic, not confuse it: every label, symbol, and payout should connect to an AI idea in a way users can quickly understand.
-Keep the interface accessible, the visuals cohesive, and the code easy to maintain with clean separation between structure, styling, and logic. Prioritize clarity, delight, and replayability over feature bloat.
+Refine the slot machine web app into a polished, production-quality experience using only vanilla HTML, CSS, and JavaScript. Ensure the game mechanics are fully complete and intuitive: spinning reels must animate smoothly, resolve to randomized outcomes, and clearly determine wins/losses with visible rules.
+
+Add clear game logic transparency: display payout rules, probabilities (or implied odds), and how “temperature” affects randomness. Ensure token balance updates correctly with each spin and prevent invalid states (e.g., spinning with zero tokens).
+
+Improve UX with responsive layout, accessible semantic HTML, and consistent visual hierarchy. Add subtle animations (reel spin easing, button states, result highlights) without overcomplicating the code.
+
+Enhance the AI satire: system logs should dynamically reflect outcomes with varied, witty messages tied to wins, losses, and randomness.
+
+Ensure code quality: modular JavaScript, readable structure, comments where helpful, and separation of concerns. Handle edge cases gracefully and ensure everything works reliably without external libraries.
