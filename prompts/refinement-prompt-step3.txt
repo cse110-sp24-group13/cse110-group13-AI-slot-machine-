@@ -1,1 +1,9 @@
+Improve an existing AI-themed slot machine web app using only vanilla HTML, CSS, and JavaScript (no frameworks). Keep the satirical concept of “AI burning tokens,” but make the gameplay clearer, more interactive, and visually engaging.
 
+Implement a proper slot machine system with at least three spinning reels, randomized outcomes, and clear win/lose conditions. Display results after each spin, including token gains, losses, or penalties. Track and update token balance and context tokens dynamically.
+
+Add key controls such as a “Spin” button, a temperature slider that influences randomness, and a visible system log that shows humorous AI-themed messages (e.g., hallucination detected, model collapse). Prevent invalid actions like spinning without enough tokens.
+
+Enhance the UI/UX with smooth reel animations, responsive layout, and clear visual feedback for buttons and outcomes. Ensure the design is cohesive, readable, and accessible using semantic HTML.
+
+Keep the code clean and maintainable with clear separation of HTML, CSS, and JavaScript, while prioritizing usability and a fun, understandable experience.
