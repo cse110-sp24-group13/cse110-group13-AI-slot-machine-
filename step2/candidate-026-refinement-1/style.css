@@ -1,0 +1,320 @@
+:root {
+    --bg-color: #0d1117;
+    --panel-bg: #161b22;
+    --accent-green: #3fb950;
+    --accent-blue: #58a6ff;
+    --accent-yellow: #d29922;
+    --accent-red: #f85149;
+    --text-color: #c9d1d9;
+    --border-color: #30363d;
+    --reel-bg: #010409;
+}
+
+body {
+    margin: 0;
+    font-family: 'JetBrains Mono', 'Fira Code', 'Segoe UI', monospace;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 95%;
+    max-width: 650px;
+    background-color: var(--panel-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.7);
+    position: relative;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+h1 {
+    font-size: 1.8rem;
+    margin: 0;
+    letter-spacing: 3px;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(88, 166, 255, 0.5);
+}
+
+.tag {
+    background-color: var(--accent-red);
+    color: white;
+    font-size: 0.6rem;
+    padding: 2px 8px;
+    border-radius: 4px;
+    vertical-align: top;
+    position: relative;
+    top: -5px;
+}
+
+.subtitle {
+    font-size: 0.75rem;
+    color: #8b949e;
+    margin: 0.5rem 0 0;
+}
+
+/* Stats Section */
+.stats-bar {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--border-color);
+    padding: 1rem;
+    border-radius: 8px;
+    background: rgba(0,0,0,0.2);
+}
+
+.stat-box {
+    text-align: center;
+}
+
+.progress-container {
+    width: 100%;
+    height: 8px;
+    background-color: #30363d;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-top: 5px;
+}
+
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--accent-blue), var(--accent-green));
+    width: 0%;
+    transition: width 0.3s ease;
+    box-shadow: 0 0 10px rgba(88, 166, 255, 0.5);
+}
+
+.label {
+    display: block;
+    font-size: 0.65rem;
+    color: #8b949e;
+    text-transform: uppercase;
+    margin-bottom: 0.2rem;
+    white-space: nowrap;
+}
+
+.value {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.green { color: var(--accent-green); text-shadow: 0 0 5px rgba(63, 185, 80, 0.3); }
+.yellow { color: var(--accent-yellow); text-shadow: 0 0 5px rgba(210, 153, 34, 0.3); }
+
+/* Slot Machine */
+.slot-machine {
+    margin-bottom: 1.5rem;
+}
+
+.reel-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    background: linear-gradient(180deg, #010409 0%, #161b22 50%, #010409 100%);
+    padding: 20px;
+    border-radius: 12px;
+    border: 2px solid var(--border-color);
+    position: relative;
+    overflow: hidden;
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.8);
+}
+
+.reel {
+    flex: 1;
+    max-width: 100px;
+    height: 120px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #30363d;
+    background: #000;
+    border-radius: 6px;
+}
+
+.reel-strip {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 3s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+}
+
+.symbol {
+    height: 120px;
+    line-height: 120px;
+    font-size: 3.5rem;
+    text-align: center;
+    user-select: none;
+    filter: drop-shadow(0 0 5px rgba(255,255,255,0.1));
+}
+
+.reel.spinning .symbol {
+    filter: blur(2px);
+}
+
+.win-line {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: rgba(63, 185, 80, 0.5);
+    box-shadow: 0 0 8px var(--accent-green);
+    pointer-events: none;
+    z-index: 5;
+}
+
+.scan-line {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent 0%, rgba(88, 166, 255, 0.1) 50%, transparent 100%);
+    pointer-events: none;
+    animation: scan 4s linear infinite;
+    z-index: 10;
+}
+
+@keyframes scan {
+    0% { top: -100%; }
+    100% { top: 100%; }
+}
+
+/* Controls */
+.controls {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.control-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.hyperparams {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 0.75rem;
+    color: #8b949e;
+}
+
+.hyperparams select, .hyperparams input[type="range"] {
+    background-color: #21262d;
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    padding: 8px;
+    border-radius: 6px;
+    width: 100%;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--accent-green) 0%, #2ea043 100%);
+    color: white;
+    border: none;
+    padding: 1.2rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-shadow: 0 4px 15px rgba(63, 185, 80, 0.3);
+}
+
+.btn-primary:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 5px rgba(63, 185, 80, 0.3);
+}
+
+.btn-primary:hover {
+    filter: brightness(1.1);
+}
+
+.btn-primary:disabled {
+    background: #21262d;
+    color: #484f58;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+/* Terminal */
+.terminal-container {
+    margin-top: 1.5rem;
+    background-color: #010409;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.75rem;
+    overflow: hidden;
+}
+
+.terminal-header {
+    background-color: #21262d;
+    padding: 6px 12px;
+    color: #8b949e;
+    font-size: 0.65rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.terminal-body {
+    padding: 12px;
+    height: 100px;
+    overflow-y: auto;
+    color: var(--accent-green);
+    scrollbar-width: thin;
+    scrollbar-color: var(--border-color) transparent;
+}
+
+.terminal-body p {
+    margin: 4px 0;
+    line-height: 1.4;
+}
+
+.win-flash {
+    animation: flash 0.5s ease-out;
+}
+
+@keyframes flash {
+    0% { background-color: transparent; }
+    50% { background-color: rgba(63, 185, 80, 0.2); }
+    100% { background-color: transparent; }
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+    .control-group {
+        grid-template-columns: 1fr;
+    }
+    
+    .symbol {
+        font-size: 2.5rem;
+    }
+    
+    .reel {
+        height: 100px;
+    }
+    
+    .reel-strip div {
+        height: 100px;
+        line-height: 100px;
+    }
+}
