@@ -23,8 +23,8 @@
 - Temperature slider is meaningful and integrated into gameplay behavior
 - System console gives strong real-time feedback and enhances immersion
 - Clear gain/loss feedback with AI-themed messages (optimization gain, entropy loss, hallucination)
-- Improved clarity compared to previous version — easier to understand outcomes
-- **Bug:** reel visuals appear during spinning but disappear after completion, reducing feedback clarity
+- Improved clarity compared to previous version, easier to understand outcomes
+- Bug: reel visuals appear during spinning but disappear after completion, reducing feedback clarity
 - Lacks strong visual result state (no persistent symbols after spin)
 
 ### Code Quality Notes
