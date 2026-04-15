@@ -1,3 +1,9 @@
-Design and implement a browser-based slot machine game using vanilla HTML, CSS, and JavaScript that avoids the use of external frameworks. The project should feature a clean, responsive UI with smooth CSS-driven animations for reel spins and win celebrations, including a dark/light mode toggle and accessible keyboard controls. You must architect the application by strictly following SRP and OCP principles, separating concerns into dedicated modules for game logic, state management, UI rendering, and audio.
+Improve and extend the existing slot machine web app using only vanilla HTML, CSS, and JavaScript (no frameworks). Keep the satirical theme of “AI burning tokens” but make the gameplay clearer, more interactive, and visually engaging.
 
-Incorporate core gameplay mechanics such as a protected betting system, an RNG-based payout engine with a detailed symbol table, and advanced features like configurable autoplay, win streak tracking, and rare jackpot events. The game logic should include a dynamic difficulty system that adjusts payout rates based on player performance while maintaining a clear display of real-time statistics, including RTP, total spins, and a detailed history log. Ensure the code is well-structured and documented for future extensibility, utilizing reusable components and avoiding global state to maintain high-quality software standards.
+Add a proper slot machine mechanic with at least 3 spinning reels, randomized outcomes, and defined win/lose conditions. Display results clearly (e.g., win messages, token gain/loss). Track and update a token balance and context tokens dynamically.
+
+Enhance UI/UX with smooth animations for spinning reels, button interactions, and feedback (e.g., loading states, logs, or humorous system messages). Ensure the layout is responsive and visually polished.
+
+Incorporate meaningful controls such as a “Spin” button, adjustable “temperature” slider that influences randomness, and a visible system log that reflects outcomes in a humorous AI-themed way.
+
+Keep the design cohesive, readable, and accessible (use semantic HTML). Prioritize clean structure, maintainability, and user experience while preserving the playful tone.

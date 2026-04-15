@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Token Burner | Spend. Spin. Hallucinate.</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="dark">
+    <div id="app">
+        <header>
+            <div class="header-main">
+                <div class="logo">AI TOKEN BURNER <span class="v">v2.0.0-mod</span></div>
+                <button id="theme-toggle" title="Toggle Dark/Light Mode" aria-label="Toggle Theme">🌓</button>
+            </div>
+            
+            <div class="stats">
+                <div class="stat-box main-balance">
+                    <label>COMPUTE UNITS</label>
+                    <span id="token-count">10,000</span>
+                </div>
+                <div class="stat-box">
+                    <label>H100 QUOTA</label>
+                    <span id="h100-status">ONLINE</span>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="machine-container">
+                <div class="reels">
+                    <div class="reel" id="reel-1"><div class="strip"></div></div>
+                    <div class="reel" id="reel-2"><div class="strip"></div></div>
+                    <div class="reel" id="reel-3"><div class="strip"></div></div>
+                    <div class="win-line"></div>
+                </div>
+
+                <div class="controls">
+                    <div class="bet-control">
+                        <label>INFERENCE COST (B)</label>
+                        <select id="bet-amount">
+                            <option value="10">10 TOKENS (Basic)</option>
+                            <option value="50">50 TOKENS (GPT-4)</option>
+                            <option value="100">100 TOKENS (O1-Reasoning)</option>
+                            <option value="500">500 TOKENS (Compute-Max)</option>
+                        </select>
+                    </div>
+                    <button id="infer-btn">INFER (SPACE)</button>
+                    <div class="auto-control">
+                        <label>AUTO-LOOP</label>
+                        <input type="checkbox" id="auto-spin">
+                    </div>
+                </div>
+
+                <!-- Real-time Stats Panel -->
+                <div class="dashboard">
+                    <div class="dash-item">
+                        <label>LIFETIME RTP</label>
+                        <span id="stat-rtp">100.0%</span>
+                    </div>
+                    <div class="dash-item">
+                        <label>TOTAL SPINS</label>
+                        <span id="stat-spins">0</span>
+                    </div>
+                    <div class="dash-item">
+                        <label>WIN STREAK</label>
+                        <span id="stat-streak">0</span>
+                    </div>
+                </div>
+            </div>
+
+            <aside class="sidebar">
+                <h3>MODEL STATUS</h3>
+                <div id="log-container">
+                    <div class="log-entry">System booting...</div>
+                    <div class="log-entry">Loading neural weights...</div>
+                </div>
+            </aside>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 AI-HYP-CORP. "Hallucinations are a feature, not a bug."</p>
+            <p class="hints">Hotkeys: [Space] Spin | [B] Change Bet | [T] Toggle Theme</p>
+        </footer>
+    </div>
+    <script type="module" src="main.js"></script>
+</body>
+</html>
