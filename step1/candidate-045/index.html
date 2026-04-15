@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Token Slot Machine</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI TOKEN SLOT MACHINE</h1>
+            <p class="subtitle">"Training" the future, one token at a time.</p>
+        </header>
+
+        <section class="display-panel">
+            <div class="stat">
+                <span class="label">Compute Tokens:</span>
+                <span id="token-count" class="value">1000</span>
+            </div>
+            <div id="status-message" class="status-board">
+                Ready to "innovate"...
+            </div>
+        </section>
+
+        <main class="slot-machine">
+            <div class="reels-container">
+                <div class="reel" id="reel-1">
+                    <div class="reel-content">🤖</div>
+                </div>
+                <div class="reel" id="reel-2">
+                    <div class="reel-content">🤖</div>
+                </div>
+                <div class="reel" id="reel-3">
+                    <div class="reel-content">🤖</div>
+                </div>
+            </div>
+
+            <div class="controls">
+                <div class="bet-controls">
+                    <label for="bet-amount">Bet Size:</label>
+                    <input type="number" id="bet-amount" value="10" min="1" step="10">
+                </div>
+                <button id="spin-button" class="spin-btn">TRAIN MODEL (SPIN)</button>
+            </div>
+        </main>
+
+        <section class="payout-table">
+            <h3>Reward Structure</h3>
+            <ul>
+                <li>🔥 🔥 🔥: 100x (GPU Meltdown)</li>
+                <li>🧠 🧠 🧠: 50x (Neural Link)</li>
+                <li>💻 💻 💻: 20x (Server Farm)</li>
+                <li>🤖 🤖 🤖: 10x (Robot)</li>
+                <li>💩 💩 💩: 0x (Hallucination)</li>
+            </ul>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Overfit Industries. All hallucinations are intentional.</p>
+        </footer>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
