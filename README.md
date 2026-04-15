@@ -17,3 +17,6 @@ Terminal - Gemini CLI
 - Ophir - Candidates 036 - 040
 - Shazi - Candidates 041 - 045
 - Jeremy - Candidates 046 - 050
+
+## Slides
+[Slideshow](https://docs.google.com/presentation/d/1XeBJafPN4MbxPa91vAI6ly9QVQv_MWHOiNR-0Tw5gxc/edit?slide=id.p5#slide=id.p5)
