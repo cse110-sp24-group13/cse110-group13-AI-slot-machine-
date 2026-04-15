@@ -14,5 +14,4 @@
 | **Lines of Code** | 134 |
 | **Runs in browser?** | YES|
 | **App Quality Notes** | The interface delivers a high-fidelity "terminal" aesthetic with responsive layouts and smooth, staggered animations that effectively gamify the abstract concept of AI token consumption. |
-| **Code Quality Notes** | The implementation maintains a clean, single-file architecture using modern CSS variables for easy skinning and an asynchronous spin function to ensure UI responsiveness during complex
-  animation sequences. |
+| **Code Quality Notes** | The implementation maintains a clean, single-file architecture using modern CSS variables for easy skinning and an asynchronous spin function to ensure UI responsiveness during complex animation sequences. |
