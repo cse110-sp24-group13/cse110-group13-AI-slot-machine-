@@ -14,9 +14,6 @@
 | **Lines of Code** | 718 |
 | **Runs in browser?** | Yes|
 | **App Quality Notes** | - Dynamic Gameplay (Temperature): Unlike a standard slot machine, the "Temperature" slider provides real agency. It allows players to choose between low-risk/low-reward "Predictable" mode and
-     high-risk/chaotic "Chaos" mode, directly impacting the symbol-weighting algorithm.
-     - Responsive Architecture
-     - Accessibility |
-| **Code Quality Notes** | - Advanced Randomness Algorithm
-- Clean CSS Architecture |
+     high-risk/chaotic "Chaos" mode, directly impacting the symbol-weighting algorithm. - Responsive Architecture - Accessibility |
+| **Code Quality Notes** | - Advanced Randomness Algorithm - Clean CSS Architecture |
 
