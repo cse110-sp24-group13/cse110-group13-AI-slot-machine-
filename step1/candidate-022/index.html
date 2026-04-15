@@ -3,52 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Slot Machine: Compute & Conquer</title>
+    <title>AI Slot Machine: Token Burner Pro</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="app">
         <header>
             <h1>AI SLOT MACHINE</h1>
-            <p class="subtitle">Burning GPU cycles for the sake of human amusement</p>
+            <div class="version-badge">v2.0.0-beta.hallucination</div>
+            <p class="subtitle">"Attention is all you need... and a massive bank account."</p>
         </header>
 
         <main id="slot-machine">
-            <div id="stats">
-                <div class="stat-box">
+            <div id="stats-grid">
+                <div class="stat-box" title="Available GPU compute credits">
                     <span class="label">COMPUTE TOKENS</span>
                     <span id="token-count" class="value">100</span>
                 </div>
-                <div class="stat-box">
-                    <span class="label">LAST WIN</span>
+                <div class="stat-box" title="Accumulated context window">
+                    <span class="label">CONTEXT TOKENS</span>
+                    <span id="context-count" class="value">0</span>
+                </div>
+                <div class="stat-box" title="ROI on last inference">
+                    <span class="label">LAST REWARD</span>
                     <span id="last-win" class="value">0</span>
                 </div>
             </div>
 
             <div id="reels-container">
-                <div class="reel" id="reel-1">
-                    <div class="reel-strip"></div>
+                <div class="reel-window">
+                    <div class="reel" id="reel-1">
+                        <div class="reel-strip"></div>
+                    </div>
+                    <div class="reel" id="reel-2">
+                        <div class="reel-strip"></div>
+                    </div>
+                    <div class="reel" id="reel-3">
+                        <div class="reel-strip"></div>
+                    </div>
+                    <div class="win-line"></div>
+                    <div class="overlay"></div>
                 </div>
-                <div class="reel" id="reel-2">
-                    <div class="reel-strip"></div>
-                </div>
-                <div class="reel" id="reel-3">
-                    <div class="reel-strip"></div>
-                </div>
-                <div class="win-line"></div>
             </div>
 
             <div id="controls">
-                <button id="spin-btn">RUN PROMPT (-10 Tokens)</button>
+                <div class="slider-container">
+                    <label for="temp-slider">INFERENCE TEMPERATURE: <span id="temp-value">0.7</span></label>
+                    <input type="range" id="temp-slider" min="0" max="2" step="0.1" value="0.7">
+                    <div class="slider-labels">
+                        <span>Predictable</span>
+                        <span>Creative</span>
+                        <span>Chaos</span>
+                    </div>
+                </div>
+                
+                <button id="spin-btn">
+                    <span class="btn-text">RUN INFERENCE</span>
+                    <span class="btn-subtext">Cost: 10 Tokens</span>
+                    <div class="btn-loader"></div>
+                </button>
             </div>
         </main>
 
         <footer id="terminal">
-            <div class="terminal-header">SYSTEM_STATUS_v1.0.42</div>
+            <div class="terminal-header">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+                <span class="terminal-title">STDOUT // sys_log.txt</span>
+            </div>
             <div id="terminal-output">
-                <p>> Initializing Neural Weights...</p>
-                <p>> Loading Bias Vectors...</p>
-                <p>> Awaiting User Intervention...</p>
+                <p class="system-msg">> Initializing weights...</p>
+                <p class="system-msg">> Downloading training data (3.4 PB)...</p>
+                <p class="system-msg">> Awaiting user prompt...</p>
             </div>
         </footer>
     </div>
