@@ -12,6 +12,6 @@
 | **Tool-reported time(s)** | 2m 7s (50.0%) |
 | **Files Produced** | index.html, style.css, script.js |
 | **Lines of Code** | 466 |
-| **Runs in browser?** | YES|
+| **Runs in browser?** | Yes |
 | **App Quality Notes** | Is a high-quality futuristic aesthetic AI gambling app, that produces random emojis and displays a red line if you lose and green line if you win.  |
 | **Code Quality Notes** | Clean vanilla JS; state-driven UI; CSS variables used for theme swapping; clear separation of concerns. |
