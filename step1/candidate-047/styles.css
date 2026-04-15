@@ -1,0 +1,262 @@
+:root {
+    --bg-color: #0d1117;
+    --card-bg: #161b22;
+    --primary-neon: #00f2ff;
+    --secondary-neon: #ff00c1;
+    --text-main: #e6edf3;
+    --text-muted: #8b949e;
+    --border-color: #30363d;
+    --accent-glow: rgba(0, 242, 255, 0.2);
+    --font-mono: 'Courier New', Courier, monospace;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 600px;
+    width: 90%;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: 2px;
+    background: linear-gradient(90deg, var(--primary-neon), var(--secondary-neon));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 20px var(--accent-glow);
+}
+
+.subtitle {
+    color: var(--text-muted);
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+/* Slot Machine Layout */
+.slot-machine {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+.stats-panel {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 1rem;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat .label {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+}
+
+.stat .value {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-neon);
+    font-family: var(--font-mono);
+}
+
+/* Reels Styles */
+.reels-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    height: 180px;
+    margin: 2rem 0;
+    position: relative;
+    overflow: hidden;
+    background: #000;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.reel {
+    flex: 1;
+    background: #111;
+    border: 1px solid #222;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+}
+
+.reel-strip {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.1s linear;
+}
+
+.symbol {
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+}
+
+.reels-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        transparent 0%,
+        rgba(0,0,0,0.4) 10%,
+        transparent 30%,
+        transparent 70%,
+        rgba(0,0,0,0.4) 90%,
+        transparent 100%
+    );
+    pointer-events: none;
+}
+
+/* Controls */
+.controls {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.config {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.config label {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+input[type="range"] {
+    accent-color: var(--primary-neon);
+    width: 150px;
+}
+
+#spin-btn {
+    background: linear-gradient(135deg, var(--primary-neon), #00a8ff);
+    border: none;
+    color: #000;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.1s, box-shadow 0.1s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#spin-btn:hover {
+    box-shadow: 0 0 15px var(--primary-neon);
+}
+
+#spin-btn:active {
+    transform: scale(0.95);
+}
+
+#spin-btn:disabled {
+    background: var(--text-muted);
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+/* Status Panel */
+.status-panel {
+    margin-top: 2rem;
+    background: #000;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    text-align: left;
+}
+
+.terminal-header {
+    background: #222;
+    padding: 5px 10px;
+    font-size: 0.7rem;
+    color: #555;
+    font-family: var(--font-mono);
+}
+
+.terminal-text {
+    padding: 15px;
+    font-family: var(--font-mono);
+    color: #33ff00;
+    font-size: 0.9rem;
+    min-height: 40px;
+}
+
+/* AGI Progress */
+.agi-progress {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.agi-progress label {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    white-space: nowrap;
+}
+
+.progress-bar {
+    flex-grow: 1;
+    height: 10px;
+    background: #222;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #ff00c1, #00f2ff);
+    transition: width 0.5s ease-out;
+    box-shadow: 0 0 10px var(--primary-neon);
+}
+
+footer {
+    margin-top: 3rem;
+    font-size: 0.7rem;
+    color: var(--text-muted);
+}
+
+/* Animations */
+@keyframes spin {
+    from { transform: translateY(0); }
+    to { transform: translateY(-100%); }
+}
+
+.spinning {
+    animation: spin 0.1s linear infinite;
+}

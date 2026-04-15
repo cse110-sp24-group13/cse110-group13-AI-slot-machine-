@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Token Burner | AI Slot Machine</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>THE TOKEN BURNER</h1>
+            <p class="subtitle">Burning GPU cycles for "Intelligence" since 2023</p>
+        </header>
+
+        <main class="slot-machine">
+            <div class="stats-panel">
+                <div class="stat">
+                    <span class="label">COMPUTE CREDITS</span>
+                    <span id="credits" class="value">100.00</span>
+                </div>
+                <div class="stat">
+                    <span class="label">CONTEXT TOKENS</span>
+                    <span id="tokens" class="value">0</span>
+                </div>
+            </div>
+
+            <div class="reels-container">
+                <div class="reel" id="reel1">
+                    <div class="reel-strip"></div>
+                </div>
+                <div class="reel" id="reel2">
+                    <div class="reel-strip"></div>
+                </div>
+                <div class="reel" id="reel3">
+                    <div class="reel-strip"></div>
+                </div>
+                <div class="overlay"></div>
+            </div>
+
+            <div class="controls">
+                <div class="config">
+                    <label for="temp">Temperature</label>
+                    <input type="range" id="temp" min="0" max="2" step="0.1" value="0.7">
+                    <span id="temp-val">0.7</span>
+                </div>
+                <button id="spin-btn">GENERATE INFERENCE</button>
+            </div>
+
+            <div class="status-panel">
+                <div class="terminal-header">SYSTEM_LOG.txt</div>
+                <div id="status-msg" class="terminal-text">Ready for prompting...</div>
+            </div>
+        </main>
+
+        <section class="agi-progress">
+            <label>Path to AGI:</label>
+            <div class="progress-bar">
+                <div id="agi-fill" class="progress-fill" style="width: 12%;"></div>
+            </div>
+            <span id="agi-percent">12.4%</span>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 OpenClosedAI. All rights reserved. Your data is our training set.</p>
+        </footer>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,6 +1,6 @@
 Run ID: candidate-041
 Timestamp: 2026-04-14T18:56:41Z
-Model+version string: Gemini 2.0 Flash
+Model+version string: gemini-3-flash-preview
 input tokens: 77,026
 output tockens:4,447
 total tockens: 215,174
