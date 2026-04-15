@@ -1,5 +1,5 @@
 # FINAL REPORT: The One-Arm AI Slot Machine Experiment
-**Team:** Group 13, Hard Coders · **Model:** Gemini 2.5 Flash Preview · **Date:** 2026-04-14
+**Team:** Group 13, Hard Coders · **Model:** Gemini 3 Flash Preview · **Date:** 2026-04-14
 
 ---
 
