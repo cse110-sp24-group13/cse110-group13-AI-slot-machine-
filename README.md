@@ -18,5 +18,7 @@ Terminal - Gemini CLI
 - Shazi - Candidates 041 - 045
 - Jeremy - Candidates 046 - 050
 
+## Demo
 
+<video src="Screen Recording 2026-04-14 at 10.34.26 PM.mov" controls width="600"></video>
 
