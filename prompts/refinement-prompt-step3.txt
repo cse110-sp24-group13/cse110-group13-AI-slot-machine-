@@ -1,9 +1,4 @@
-Improve an existing AI-themed slot machine web app using only vanilla HTML, CSS, and JavaScript (no frameworks). Keep the satirical concept of “AI burning tokens,” but make the gameplay clearer, more interactive, and visually engaging.
-
-Implement a proper slot machine system with at least three spinning reels, randomized outcomes, and clear win/lose conditions. Display results after each spin, including token gains, losses, or penalties. Track and update token balance and context tokens dynamically.
-
-Add key controls such as a “Spin” button, a temperature slider that influences randomness, and a visible system log that shows humorous AI-themed messages (e.g., hallucination detected, model collapse). Prevent invalid actions like spinning without enough tokens.
-
-Enhance the UI/UX with smooth reel animations, responsive layout, and clear visual feedback for buttons and outcomes. Ensure the design is cohesive, readable, and accessible using semantic HTML.
-
-Keep the code clean and maintainable with clear separation of HTML, CSS, and JavaScript, while prioritizing usability and a fun, understandable experience.
+Create a polished, browser-based parody of AI inference as a slot machine using only HTML, CSS, and JavaScript. The experience should feel instantly understandable: users spend tokens to run the “model,” spin three reels, and receive outcomes that clearly explain whether the model converged, hallucinated, collapsed, or paid out.
+Each spin must have readable stakes, visible odds-inspired feedback, and immediate balance updates for both token budget and context window. Temperature should not be cosmetic; it should noticeably change volatility, making higher settings produce riskier, less stable results. Include a live system console that turns every result into a funny but readable AI status report.
+Make the app feel alive with smooth reel motion, satisfying button states, strong result screens, and responsive layout. Use satire to reinforce the mechanic, not confuse it: every label, symbol, and payout should connect to an AI idea in a way users can quickly understand.
+Keep the interface accessible, the visuals cohesive, and the code easy to maintain with clean separation between structure, styling, and logic. Prioritize clarity, delight, and replayability over feature bloat.
