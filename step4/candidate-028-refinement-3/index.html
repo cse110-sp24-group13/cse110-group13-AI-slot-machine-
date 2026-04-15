@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Inference Slot Machine - Model Optimization Game</title>
+    <meta name="description" content="A satirical AI-themed slot machine web app exploring model inference, temperature, and context windows.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Inference <span class="accent">Slot Machine</span></h1>
+            <div class="metrics" role="region" aria-label="Game Metrics">
+                <div class="metric">
+                    <label for="token-balance">Token Budget</label>
+                    <span id="token-balance" aria-live="polite">1000</span>
+                </div>
+                <div class="metric">
+                    <label id="context-label">Context Window</label>
+                    <div class="progress-bar" role="progressbar" aria-labelledby="context-label" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100">
+                        <div id="context-progress" style="width: 100%;"></div>
+                    </div>
+                </div>
+                <div class="metric">
+                    <label>Streak</label>
+                    <span id="streak-count" aria-live="polite">0</span>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="slot-machine" role="img" aria-label="Slot Machine Reels Showing Current Model State">
+                <div class="reel" id="reel-1" aria-label="Reel 1">
+                    <div class="reel-container">
+                        <div class="symbol">✅</div>
+                    </div>
+                </div>
+                <div class="reel" id="reel-2" aria-label="Reel 2">
+                    <div class="reel-container">
+                        <div class="symbol">✅</div>
+                    </div>
+                </div>
+                <div class="reel" id="reel-3" aria-label="Reel 3">
+                    <div class="reel-container">
+                        <div class="symbol">✅</div>
+                    </div>
+                </div>
+                <div class="win-line" aria-hidden="true"></div>
+            </div>
+
+            <div class="controls">
+                <div class="control-group">
+                    <label for="temperature">
+                        <span>Sampling Temperature</span>
+                        <span id="temp-val">0.7</span>
+                    </label>
+                    <input type="range" id="temperature" min="0.1" max="2.0" step="0.1" value="0.7" 
+                           aria-valuemin="0.1" aria-valuemax="2.0" aria-valuenow="0.7">
+                </div>
+                <div class="button-group">
+                    <button id="spin-btn" aria-label="Run Inference (Cost: 50 tokens)">Run Inference</button>
+                    <button id="reset-btn" class="secondary" aria-label="Reset Model Progress and State">Reset Model</button>
+                </div>
+            </div>
+
+            <details class="paytable">
+                <summary>View Optimization Paytable</summary>
+                <div class="paytable-grid">
+                    <div class="paytable-item"><span>💎 💎 💎</span> <span>+500 (Jackpot)</span></div>
+                    <div class="paytable-item"><span>✅ ✅ ✅</span> <span>+200 (Converged)</span></div>
+                    <div class="paytable-item"><span>🧠 🧠 🧠</span> <span>+100 (Parameter)</span></div>
+                    <div class="paytable-item"><span>😵‍💫 😵‍💫 😵‍💫</span> <span>-150 (Hallucination)</span></div>
+                    <div class="paytable-item"><span>📉 📉 📉</span> <span>-300 (Collapse)</span></div>
+                    <div class="paytable-item"><span>Any 2 Good</span> <span>+25 (Partial)</span></div>
+                </div>
+            </details>
+        </main>
+
+        <aside class="console" aria-label="System Logs">
+            <div class="console-header">
+                <span>System Console</span>
+                <span id="status-indicator">● ONLINE</span>
+            </div>
+            <div id="console-logs" class="console-logs" role="log" aria-live="polite" aria-atomic="false">
+                <div class="log-entry">Initializing weights...</div>
+                <div class="log-entry">Loading pre-trained model...</div>
+                <div class="log-entry system">Ready for inference.</div>
+            </div>
+        </aside>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
