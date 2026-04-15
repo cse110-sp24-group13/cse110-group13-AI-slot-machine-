@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The AGI Jackpot - AI Slot Machine</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <header>
+            <h1>The AGI Jackpot</h1>
+            <p class="tagline">Scale your compute. Abandon your relevance.</p>
+        </header>
+
+        <div class="stats-panel">
+            <div class="stat">
+                <span class="label">Compute Credits:</span>
+                <span id="credits" class="value">1000</span>
+            </div>
+            <div class="stat">
+                <span class="label">Human Relevance:</span>
+                <span id="relevance" class="value">99%</span>
+            </div>
+        </div>
+
+        <div class="slot-machine">
+            <div class="reels">
+                <div class="reel" id="reel-1">
+                    <div class="reel-inner">🤖</div>
+                </div>
+                <div class="reel" id="reel-2">
+                    <div class="reel-inner">🧠</div>
+                </div>
+                <div class="reel" id="reel-3">
+                    <div class="reel-inner">⚡</div>
+                </div>
+            </div>
+            <div class="payline"></div>
+        </div>
+
+        <div class="controls">
+            <button id="spin-btn">TRAIN MODEL (Cost: 100 Credits)</button>
+        </div>
+
+        <div id="status-msg" class="status-msg">
+            Ready to optimize weights...
+        </div>
+
+        <div class="pay-table">
+            <h3>Reward Structure</h3>
+            <ul>
+                <li>🤖 🤖 🤖 : VC Seed Round (+500 Credits)</li>
+                <li>🧠 🧠 🧠 : Neural Breakthrough (+1000 Credits)</li>
+                <li>⚡ ⚡ ⚡ : GPU Cluster Secured (+2500 Credits)</li>
+                <li>💸 💸 💸 : IPO / EXIT (+10000 Credits)</li>
+                <li>💩 💩 💩 : Massive Hallucination (-500 Credits)</li>
+            </ul>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
